@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
-html {
+html,
+body {
+  background-color: #171717;
   scroll-behavior: smooth;
+  min-height: 100%;
 }
