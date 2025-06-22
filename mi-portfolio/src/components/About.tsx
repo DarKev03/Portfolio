@@ -4,7 +4,7 @@ export default function About() {
       id="about"
       className="md:w-screen md:h-screen bg-neutral-900 text-neutral-100 flex flex-col py-20 px-6 text-center border-t border-neutral-800"
     >
-      <h2 className="text-3xl font-bold mb-4">Sobre mí</h2>
+      <h2 className="text-3xl font-bold mb-4">About me</h2>
       <div className="flex flex-col md:flex-row items-center gap-20 md:gap-25 max-w-6xl mx-auto justify-between pb-4">
         <p className="text-lg text-neutral-400 text-left md:w-1/2 whitespace-pre-line">
           {`I'm a passionate software developer who thrives on turning ideas into robust, user-friendly digital products. I specialize in modern web technologies, both frontend and backend, and enjoy building applications that combine clean code, thoughtful design, and seamless user experience.
