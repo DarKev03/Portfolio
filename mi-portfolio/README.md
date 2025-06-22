@@ -1,54 +1,50 @@
-# React + TypeScript + Vite
+# Mi Portfolio – Kevin García
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es mi portfolio personal desarrollado con React, TypeScript y Tailwind CSS. Aquí muestro mis proyectos, habilidades y formas de contacto.
 
-Currently, two official plugins are available:
+## Características
+- Diseño moderno y responsive
+- Secciones: Inicio, Sobre mí, Skills, Proyectos, Contacto
+- Animaciones y efectos visuales
+- Formulario de contacto funcional
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías utilizadas
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
 
-## Expanding the ESLint configuration
+## Instalación y uso
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/kevingarcia/mi-portfolio.git
+   cd mi-portfolio
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+4. Abre [http://localhost:5173](http://localhost:5173) en tu navegador.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Estructura del proyecto
+- `src/components/` – Componentes reutilizables (Navbar, About, Skills, Projects, Contact, Footer)
+- `src/pages/` – Páginas principales
+- `public/` – Archivos estáticos (imágenes, favicon, etc.)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Personalización
+- Cambia la información personal y los proyectos en los componentes correspondientes.
+- Modifica los estilos en `tailwind.config.js` o en los archivos de componentes.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Despliegue
+Puedes desplegar este portfolio fácilmente en plataformas como Vercel, Netlify o GitHub Pages.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Licencia
+Este proyecto está bajo la licencia MIT.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+Hecho con ❤️ por Kevin García
