@@ -1,0 +1,5 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="32" cy="32" r="30" fill="#18181B" stroke="#0EA5E9" stroke-width="2"/>
+  <!-- Aleta de tiburón estilizada -->
+  <path d="M32 20 Q34 26 40 32 Q34 30 28 40 Q30 30 32 20" fill="#0EA5E9"/>
+</svg>
