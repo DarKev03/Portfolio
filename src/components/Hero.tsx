@@ -1,6 +1,25 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+function changeName(names: string[]) {
+    const randomIndex = Math.floor(Math.random() * names.length);
+    return names[randomIndex];
+}
+
+var names = ["Developer", "Creative", "Focused", "Problem Solver", "Innovator", "Tech Enthusiast", "Coder", "Designer"];
+
 export default function Hero() {
+    const [showName, setShowName] = useState(false);
+    const [randomName, setRandomName] = useState("");
+
+    useEffect(() => {
+        setRandomName(changeName(names));
+        const timer = setTimeout(() => {
+            setShowName(true);
+        }, 2000);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <section
             id="hero"
@@ -12,7 +31,29 @@ export default function Hero() {
                 transition={{ duration: 2.5 }}
                 className="text-4xl md:text-6xl font-bold mb-4"
             >
-                Hi, I'm <span className="text-sky-400">Kevin García</span>
+                Hi, I'm{" "}
+                <span className="text-sky-400">
+                    {!showName ? (
+                        <motion.span
+                            key={randomName}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            {randomName}
+                        </motion.span>
+                    ) : (
+                        <motion.span
+                            key="Kevin García"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            Kevin García
+                        </motion.span>
+                    )}
+                </span>
             </motion.h1>
             <motion.p
                 initial={{ opacity: 0 }}
