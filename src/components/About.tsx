@@ -28,6 +28,7 @@ export default function About() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
+          className="hover:text-sky-400 transition hover:scale-110"
         >
           <FaLinkedin />
         </a>
@@ -36,6 +37,7 @@ export default function About() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
+          className="hover:text-sky-400 transition hover:scale-110"
         >
           <FaGithub />
         </a>
@@ -44,6 +46,7 @@ export default function About() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
+          className="hover:text-sky-400 transition hover:scale-110"
         >
           <FaInstagram />
         </a>
