@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="md:w-screen md:h-screen bg-neutral-900 text-neutral-100 flex flex-col py-20 px-6 text-center border-t border-neutral-800"
+      className="md:w-screen md:h-full bg-neutral-900 text-neutral-100 flex flex-col py-20 px-6 text-center border-t border-neutral-800"
     >
       <h2 className="text-3xl font-bold mb-4">About me</h2>
       <div className="flex flex-col md:flex-row items-center gap-20 md:gap-25 max-w-6xl mx-auto justify-between pb-4">
@@ -22,28 +22,31 @@ export default function About() {
           loading="lazy"
         />
       </div>
-      <div className="flex flex-row mt-auto md:min-w-6xl text-neutral-400 justify-between md:mx-auto text-2xl">
+      <div className="flex flex-row mt-auto text-neutral-400 gap-12 mx-auto text-2xl max-w-6xl pt-12 w-full justify-between">
         <a
-          href="https://www.linkedin.com/in/kevingarcia"
+          href="https://www.linkedin.com/in/kevin-r-garc%C3%ADa-hern%C3%A1ndez-5859b6173/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
+          className="hover:text-sky-400 transition hover:scale-110"
         >
           <FaLinkedin />
         </a>
         <a
-          href="https://github.com/kevingarcia"
+          href="https://github.com/DarKev03"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
+          className="hover:text-sky-400 transition hover:scale-110"
         >
           <FaGithub />
         </a>
         <a
-          href="https://instagram.com/kevingarcia"
+          href="https://www.instagram.com/_kev.0_/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
+          className="hover:text-sky-400 transition hover:scale-110"
         >
           <FaInstagram />
         </a>

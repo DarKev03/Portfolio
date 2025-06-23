@@ -3,8 +3,8 @@
     "id": 1,
     "title": "MyRecipes",
     "description": "App to manage and plan personalised recipes created with Flutter, Spring Boot and Supabase.",
-    "image": "/portfolio-demo.png",
-    "url": "https://miportfolio.com",
+    "image": "",
+    "url": "",
     "github": "https://github.com/DarKev03/MyRecipesApp"
   },
   {
@@ -12,15 +12,15 @@
     "title": "JPMultitarea",
     "description": "Landing page for a company that offers multiple services, built with React and Tailwind.",
     "image": "/project_photo.png",
-    "url": "https://ecommerce-demo.com",
-    "github": "https://github.com/DarKev03/JPMultitarea"
+    "url": "https://jp-multitarea.vercel.app/",
+    "github": "https://jp-multitarea.vercel.app/"
   },
   {
     "id": 3,
     "title": "SaaS Notion to Google Calendar",
     "description": "Saas application that syncs Notion tasks with Google Calendar.",
-    "image": "/api-demo.png",
-    "url": "https://api-demo.com",
+    "image": "",
+    "url": "",
     "github": "https://github.com/DarKev03/SyncNotiontoGoogleCalendar"
   }  
 ]
