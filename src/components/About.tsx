@@ -1,3 +1,5 @@
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+
 export default function About() {
   return (
     <section
@@ -20,10 +22,31 @@ export default function About() {
           loading="lazy"
         />
       </div>
-      <div className="flex flex-row mt-auto md:min-w-6xl text-neutral-400 justify-between md:mx-auto">
-            <p>Linkedln</p>
-            <p>GitHub</p>
-            <p>Instagram</p>
+      <div className="flex flex-row mt-auto md:min-w-6xl text-neutral-400 justify-between md:mx-auto text-2xl">
+        <a
+          href="https://www.linkedin.com/in/kevingarcia"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin />
+        </a>
+        <a
+          href="https://github.com/kevingarcia"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <FaGithub />
+        </a>
+        <a
+          href="https://instagram.com/kevingarcia"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <FaInstagram />
+        </a>
       </div>
     </section>
   );
