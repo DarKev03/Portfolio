@@ -21,11 +21,11 @@ export default function Contact() {
                 import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             )
             .then(
-                (result) => {
+                () => {
                     setFeedback("¡Message correctly send!");
                     form.current?.reset();
                 },
-                (error) => {
+                () => {
                     setFeedback("It seems to have failed. Try again");
                 }
             )
