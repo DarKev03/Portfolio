@@ -16,7 +16,7 @@ export default function Skills() {
                     transition={{
                         repeat: Infinity,
                         repeatType: "loop",
-                        duration: 20,
+                        duration: 60,
                         ease: "linear",
                     }}
                     style={{ width: "max-content" }}
