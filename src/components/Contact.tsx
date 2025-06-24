@@ -26,7 +26,7 @@ export default function Contact() {
                     form.current?.reset();
                 },
                 (error) => {
-                    setFeedback("It seems to have failed. Try again.");
+                    setFeedback("It seems to have failed. Try again");
                 }
             )
             .finally(() => setSending(false));
