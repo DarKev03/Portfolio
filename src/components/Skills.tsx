@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const skills = ['React', 'TypeScript', 'Tailwind', 'Node.js', 'Vite', 'Next.js', 'Flutter', 'SQL', '.NET', 'Firebase', 'GraphQL', 'REST APIs', 'Git', 'Docker', 'Agile Methodologies', 'UI/UX Design'];
+const skills = ['React', 'TypeScript', 'Tailwind', 'Node.js', 'Vite', 'Next.js', 'Flutter', 'SQL', '.NET', 'Firebase', 'Spring Boot', 'REST APIs', 'Git', 'Docker', 'Agile Methodologies', 'UI/UX Design'];
 
 export default function Skills() {
     return (

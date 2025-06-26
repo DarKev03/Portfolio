@@ -9,8 +9,8 @@ export default function About() {
   useEffect(() => {
     if (activeTab === "download CV") {
       const link = document.createElement("a");
-      link.href = "/assets/CV Kevin García.pdf";
-      link.download = "CV Kevin García.pdf";
+      link.href = "/CV_Kevin_Garcia.pdf";
+      link.download = "CV_Kevin_Garcia.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
