@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import Timeline from "./TimeLine";
 
 export default function About() {
   const [activeTab, setActiveTab] = useState("about");
@@ -58,9 +59,7 @@ export default function About() {
         </div>
       )}
       {activeTab === "career" && (
-        <div className="max-w-4xl mx-auto text-left text-neutral-400 text-lg pb-4">
-          {/*Pestaña con información sobre mi carrera la laboral*/}
-        </div>
+        <Timeline />
       )}
       <div className="flex flex-row mt-auto text-neutral-400 gap-12 mx-auto text-2xl max-w-6xl pt-12 w-full justify-between">
         <a
