@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function About() {
   const [activeTab, setActiveTab] = useState("about");
+  const tabs = ["about", "career", "download CV"];
   return (
     <section
       id="about"
@@ -11,26 +12,19 @@ export default function About() {
       <h2 className="text-3xl font-bold mb-4">About me</h2>
       {/* Tabs */}
       <div className="flex justify-center mb-8 gap-4 bg-neutral-800 rounded-full w-full max-w-xl mx-auto">
-        <button
-          className={`px-6 py-2 rounded-xl font-semibold transition-colors duration-200 focus:outline-none hover:bg-neutral-700 cursor-pointer ${
-            activeTab === "about"
-              ? "bg-neutral-700 text-sky-400"
-              : "bg-neutral-800 text-neutral-400"
-          }`}
-          onClick={() => setActiveTab("about")}
-        >
-          About Me
-        </button>
-        <button
-          className={`px-6 py-2 rounded-xl font-semibold transition-colors duration-200 focus:outline-none hover:bg-neutral-700 cursor-pointer ${
-            activeTab === "career"
-              ? "bg-neutral-700 text-sky-400"
-              : "bg-neutral-800 text-neutral-400"
-          }`}
-          onClick={() => setActiveTab("career")}
-        >
-          Career
-        </button>
+        {tabs.map((tab) => (
+          <button
+            key={tab}
+            className={`px-6 py-2 rounded-xl font-semibold transition-colors duration-200 focus:outline-none hover:bg-neutral-700 cursor-pointer ${
+              activeTab === tab
+                ? "bg-neutral-700 text-sky-400"
+                : "bg-neutral-800 text-neutral-400"
+            }`}
+            onClick={() => setActiveTab(tab)}
+          >
+            {tab.charAt(0).toUpperCase() + tab.slice(1)}
+          </button>
+        ))}
       </div>
       {/* Tab Content */}
       {activeTab === "about" && (
