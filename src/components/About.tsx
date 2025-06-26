@@ -1,9 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function About() {
   const [activeTab, setActiveTab] = useState("about");
   const tabs = ["about", "career", "download CV"];
+
+  useEffect(() => {
+    if (activeTab === "download CV") {
+      const link = document.createElement("a");
+      link.href = "/assets/CV Kevin García.pdf";
+      link.download = "CV Kevin García.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setActiveTab("about");
+    }
+  }, [activeTab]);
+
   return (
     <section
       id="about"
