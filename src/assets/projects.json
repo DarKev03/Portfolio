@@ -14,13 +14,5 @@
     "image": "/project_photo.png",
     "url": "https://jp-multitarea.vercel.app/",
     "github": "https://jp-multitarea.vercel.app/"
-  },
-  {
-    "id": 3,
-    "title": "SaaS Notion to Google Calendar",
-    "description": "Saas application that syncs Notion tasks with Google Calendar.",
-    "image": "",
-    "url": "",
-    "github": "https://github.com/DarKev03/SyncNotiontoGoogleCalendar"
-  }  
+  }
 ]
