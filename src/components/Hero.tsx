@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 
 function changeName(names: string[]) {
@@ -6,19 +6,29 @@ function changeName(names: string[]) {
     return names[randomIndex];
 }
 
+
 var names = ["Developer", "Creative", "Focused", "Problem Solver", "Innovator", "Tech Enthusiast", "Coder", "Designer"];
 
 export default function Hero() {
     const [showName, setShowName] = useState(false);
-    const [randomName, setRandomName] = useState("");
+    const [randomName, setRandomName] = useState(changeName(names));
+    const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
     useEffect(() => {
-        setRandomName(changeName(names));
-        const timer = setTimeout(() => {
-            setShowName(true);
-        }, 2000);
-        return () => clearTimeout(timer);
-    }, []);
+        if (!showName) {
+            intervalRef.current = setInterval(() => {
+                setRandomName(changeName(names));
+            }, 2000);
+        }
+        return () => {
+            if (intervalRef.current) clearInterval(intervalRef.current);
+        };
+    }, [showName]);
+
+    const handleClick = () => {
+        setShowName(true);
+        if (intervalRef.current) clearInterval(intervalRef.current);
+    };
 
     return (
         <section
@@ -32,7 +42,7 @@ export default function Hero() {
                 className="text-4xl md:text-6xl font-bold mb-4"
             >
                 Hi, I'm{" "}
-                <span className="text-sky-400">
+                <span className="text-sky-400 cursor-pointer" onClick={handleClick}>
                     {!showName ? (
                         <motion.span
                             key={randomName}
