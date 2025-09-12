@@ -1,18 +1,26 @@
 const experiences = [
     {
         title: "FullStack Developer",
-        company: "Idrica",
-        date: "Sep 2024 – Actualidad",
+        company: "Metrica S.L – Founder & FullStack Developer.",
+        date: "Apr 2025 – Current",
         description:
-            "Development of mobile applicantion and backend services for water management systems. Use of PostgreSQL, .NET MAUI, React, and NoSQL DB Couchbase.",
-        side: "left",
+            "Launched my own software development company, delivering end-to-end solutions for mobile, web, and desktop. Clients include Valencia Outdoor, Gangazon, and JibilHedi. Focus on building scalable apps with React, .NET, and modern cloud infrastructures.",
+        side: "right",
     },
     {
         title: "FullStack Developer",
-        company: "Freelance",
-        date: "Jun 2024 – Sep 2024",
+        company: "Idrica",
+        date: "Sep 2024 – Current",
         description:
-            "Development of web applications and custom software on demand.",
+            "Building mobile and backend solutions for smart water management systems. Tech stack: PostgreSQL, .NET MAUI, React, Couchbase. Delivered scalable services improving monitoring and control efficiency across multiple cities.",
+        side: "left",
+    },
+    {
+        title: "System Analyst",
+        company: "University of Valencia - Pulsia",
+        date: "Feb 2023 – Apr 2024",
+        description:
+            "Managed and optimized IT systems for the University of Valencia, improving reliability and performance of academic platforms.",
         side: "right",
     },
 ];
@@ -30,7 +38,7 @@ export default function Timeline() {
                         className={`flex w-full ${exp.side === "left" ? "md:justify-start justify-center" : "md:justify-end justify-center"}`}
                     >
                         <div className="md:w-1/2 w-full relative flex">
-                            
+
                             {/* Tarjeta */}
                             <div
                                 className={`border-1 border-transparent hover:border-cyan-400 bg-neutral-800 p-6 rounded-xl shadow-lg text-white relative z-10 ${exp.side === "left" ? "md:mr-10 md:ml-0" : "md:ml-10 md:mr-0"} mx-auto w-full md:w-auto`}

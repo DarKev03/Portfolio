@@ -44,7 +44,7 @@ export default function About() {
       {activeTab === "about" && (
         <div className="flex flex-col md:flex-row items-center gap-20 md:gap-25 max-w-6xl mx-auto justify-between pb-4">
           <p className="text-lg text-neutral-400 text-left md:w-1/2 whitespace-pre-line">
-            {`I'm a passionate software developer who thrives on turning ideas into robust, user-friendly digital products. I specialize in modern web technologies, both frontend and backend, and enjoy building applications that combine clean code, thoughtful design, and seamless user experience.
+            {`I'm a passionate software developer who thrives on turning ideas into robust, user-friendly digital products. I specialize in modern web and mobile technologies, both frontend and backend, and enjoy building applications that combine clean code, thoughtful design, and seamless user experience.
           
           My development philosophy is simple: keep things clear, efficient, and maintainable. I value transparent communication, agile teamwork, and continuous improvement. For me, every project is a chance to create something meaningful—whether it’s a beautiful interface, a scalable API, or a complete end-to-end system.
 
