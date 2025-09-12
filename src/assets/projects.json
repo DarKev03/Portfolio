@@ -2,16 +2,24 @@
   {
     "id": 1,
     "title": "MyRecipes - TFG",
-    "description": "App to manage and plan personalised recipes created with Flutter, Spring Boot and Supabase.",
-    "image": "",
+    "description": "App to manage and plan personalised recipes created with Flutter, Spring Boot and Supabase. Features include recipe creation, meal planning, ingredient management, and user authentication.",
+    "image": "/project_photo.png",
+    "images": [
+      "/project_photo.png",
+      "/project_photo.png"
+    ],
     "url": "",
     "github": "https://github.com/DarKev03/MyRecipesApp"
   },
   {
     "id": 2,
     "title": "JPMultitarea",
-    "description": "Landing page for a company that offers multiple services, built with React and Tailwind.",
+    "description": "Landing page for a company that offers multiple services, built with React and Tailwind. Responsive design with modern animations and contact forms.",
     "image": "/project_photo.png",
+    "images": [
+      "/project_photo.png",
+      "/project_photo.png"
+    ],
     "url": "https://jp-multitarea.vercel.app/",
     "github": "https://jp-multitarea.vercel.app/"
   },
@@ -20,14 +28,22 @@
     "title": "Gangazon Fichajes",
     "description": "Mobile app to manage time and attendance of employees. Users are able to manage their vacations, work hours, upload documents and more. Built with Flutter and Supabase.",
     "image": "/project_photo.png",
+    "images": [
+      "/project_photo.png",
+      "/project_photo.png"
+    ],
     "url": "",
     "github": ""
   },
   {
     "id": 4,
     "title": "Valencia Outdoor",
-    "description": "Multiplattform app for management app of a outdoor advertising company. Built with Flutter and Supabase.",
+    "description": "Multiplatform app for management of an outdoor advertising company. Built with Flutter and Supabase with real-time updates and geolocation features.",
     "image": "/Captura de pantalla 2025-09-12 a las 11.44.18.png",
+    "images": [
+      "/Captura de pantalla 2025-09-12 a las 11.44.18.png",
+      "/project_photo.png"
+    ],
     "url": "",
     "github": ""
   }
