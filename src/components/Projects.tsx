@@ -61,7 +61,7 @@ export default function Projects() {
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="w-full h-40 object-cover rounded mb-4 bg-neutral-700"
+                                className="w-full h-40 object-contain p-3 rounded mb-4 bg-neutral-200"
                             />
                         ) : (
                             <div className="w-full h-40 bg-neutral-700 rounded mb-4 flex items-center justify-center">
