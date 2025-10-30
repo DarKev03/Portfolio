@@ -7,23 +7,29 @@ function changeName(names: string[]) {
 }
 
 
-var names = ["Developer", "Creative", "Focused", "Problem Solver", "Innovator", "Tech Enthusiast", "Coder", "Designer"];
+var names = ["Developer", "Creative", "Focused", "Problem Solver", "Innovator", "Tech Enthusiast", "Coder"];
 
 export default function Hero() {
     const [showName, setShowName] = useState(false);
     const [randomName, setRandomName] = useState(changeName(names));
+    const [contador, setContador] = useState(0);
     const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
     useEffect(() => {
         if (!showName) {
             intervalRef.current = setInterval(() => {
                 setRandomName(changeName(names));
-            }, 2000);
+                setContador((prev) => prev + 1);             
+            }, 1500);
+        }
+        if (contador >= 10) {
+            setShowName(true);
+            if (intervalRef.current) clearInterval(intervalRef.current);
         }
         return () => {
             if (intervalRef.current) clearInterval(intervalRef.current);
         };
-    }, [showName]);
+    }, [showName, contador]);
 
     const handleClick = () => {
         setShowName(true);
@@ -71,7 +77,7 @@ export default function Hero() {
                 transition={{ duration: 2.5, delay: 0.2 }}
                 className="text-xl md:text-2xl max-w-xl text-neutral-400"
             >
-                Full Stack developer having fun crafting clean and efficient solutions.
+                Full Stack developer having fun building clean and efficient solutions.
             </motion.p>
         </section>
     );

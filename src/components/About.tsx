@@ -25,18 +25,23 @@ export default function About() {
     >
       <h2 className="text-3xl font-bold mb-4">About me</h2>
       {/* Tabs */}
-      <div className="flex justify-center mb-8 gap-4 bg-neutral-800 rounded-full w-full max-w-xl mx-auto">
+      <div className="relative flex justify-center mb-8 gap-1.5 bg-gradient-to-r from-neutral-800 via-neutral-850 to-neutral-800 p-1 rounded-full w-full max-w-lg mx-auto shadow-lg border border-neutral-700/50">
         {tabs.map((tab) => (
           <button
             key={tab}
-            className={`px-6 py-2 rounded-xl font-semibold transition-colors duration-200 focus:outline-none hover:bg-neutral-700 cursor-pointer ${
+            className={`relative z-10 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 focus:outline-none cursor-pointer flex-1 ${
               activeTab === tab
-                ? "bg-neutral-700 text-sky-400"
-                : "bg-neutral-800 text-neutral-400"
+                ? "text-white"
+                : "text-neutral-400 hover:text-neutral-200"
             }`}
             onClick={() => setActiveTab(tab)}
           >
-            {tab.charAt(0).toUpperCase() + tab.slice(1)}
+            <span className="relative z-10">
+              {tab.charAt(0).toUpperCase() + tab.slice(1)}
+            </span>
+            {activeTab === tab && (
+              <span className="absolute inset-0 bg-gradient-to-r from-sky-500 to-cyan-400 rounded-full shadow-lg shadow-sky-500/50 animate-pulse-subtle" />
+            )}
           </button>
         ))}
       </div>
