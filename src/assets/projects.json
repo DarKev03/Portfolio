@@ -38,7 +38,7 @@
   {
     "id": 4,
     "title": "Valencia Outdoor",
-    "description": "Multiplatform app for management of an outdoor advertising company. Built with Flutter and Supabase with real-time updates and geolocation features.",
+    "description": "Multiplatform app for management of an outdoor advertising company. Built with Flutter and Supabase with real-time updates and automated reporting creation.",
     "image": "/Captura de pantalla 2025-09-12 a las 11.44.18.png",
     "images": [
       "/Captura de pantalla 2025-09-12 a las 11.44.18.png",
