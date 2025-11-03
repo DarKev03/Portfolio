@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaBriefcase, FaGlassCheers } from "react-icons/fa";
+import { FaBriefcase, FaUmbrellaBeach } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import Timeline from "./TimeLine";
 
@@ -68,7 +68,7 @@ Esta experiencia me llevó a cofundar la consultora Métrica S.L., donde me dese
 Hoy en día tengo como objetivo seguir creciendo y desarrollándome en mi área, intentando contribuir en proyectos que puedan aportar valor real que faciliten y traigan beneficio a la vida de las personas.`}
           </p>
           <div>
-            <div className="relative w-40 h-40 md:w-100 md:h-100 overflow-hidden rounded-lg border-4 border-neutral-800">
+            <div className="relative w-80 h-80 md:w-100 md:h-100 overflow-hidden rounded-lg border-4 border-neutral-800">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={image}
@@ -98,7 +98,7 @@ Hoy en día tengo como objetivo seguir creciendo y desarrollándome en mi área,
                 className={`text-sm font-semibold text-neutral-300 hover:text-neutral-100 bg-neutral-700 rounded-full px-4 py-2 flex items-center justify-center gap-2 transition cursor-pointer ${image === "perfil_2.JPEG" ? "ring-2 ring-sky-500" : ""}`} 
                 onClick={() => changeImage("perfil_2.JPEG")}
               >
-                <FaGlassCheers className="text-lg" />
+                <FaUmbrellaBeach className="text-lg" />
                 <span>Viernes</span>
               </button>
             </div>
