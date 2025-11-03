@@ -5,7 +5,11 @@ export default {
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            animation: {
+                'pulse-subtle': 'pulse-subtle 2s ease-in-out infinite',
+            },
+        },
     },
     plugins: [],
 }

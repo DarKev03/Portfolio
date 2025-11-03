@@ -1,18 +1,34 @@
 const experiences = [
     {
-        title: "FullStack Developer",
-        company: "Idrica",
-        date: "Sep 2024 – Actualidad",
+        title: "Desarrollador FullStack",
+        company: "Métrica S.L – Fundador y Desarrollador",
+        date: "Abr 2025 – Actualidad",
         description:
-            "Development of mobile applicantion and backend services for water management systems. Use of PostgreSQL, .NET MAUI, React, and NoSQL DB Couchbase.",
+            "Empresa de desarrollo de software en la que soy co-fundador, entregando soluciones completas para móvil, web y escritorio. Entre los clientes se incluyen nombres como Valencia Outdoor, Gangazon y JibilHedi. Me enfoco en crear aplicaciones escalables con React, Flutter e infraestructuras cloud modernas.",
         side: "left",
     },
     {
-        title: "FullStack Developer",
-        company: "Freelance",
-        date: "Jun 2024 – Sep 2024",
+        title: "Desarrollador FullStack",
+        company: "Idrica",
+        date: "Sep 2024 – Actualidad",
         description:
-            "Development of web applications and custom software on demand.",
+            "Desarrollo frontend y backend de una aplicación móvil encargada de la gestión inteligente de ordenes de trabajo para operarios en campo. Se implementan funciones claves como la gestión de ordenes en tiempo real, telelecturas y multitenant.",
+        side: "right",
+    },
+    {
+        title: "Analista de Datos - Prácticas",
+        company: "ViewNext",
+        date: " Marz 2024 – Jun 2024",
+        description:
+            "Desarrollé cuadros de mando interactivos y automatizaciones de informes utilizando Power BI y Python. Estas herramientas optimizaron la toma de decisiones al proporcionar análisis de datos claros y procesables para clientes clave.",
+        side: "left",
+    },    
+    {
+        title: "Analista de Sistemas",
+        company: "Universidad de Valencia - Pulsia",
+        date: "Feb 2023 – Marz 2024",
+        description:
+            "Gestioné y optimicé sistemas informáticos para la Universidad de Valencia, mejorando la fiabilidad y rendimiento de las plataformas académicas.",
         side: "right",
     },
 ];
@@ -30,7 +46,7 @@ export default function Timeline() {
                         className={`flex w-full ${exp.side === "left" ? "md:justify-start justify-center" : "md:justify-end justify-center"}`}
                     >
                         <div className="md:w-1/2 w-full relative flex">
-                            
+
                             {/* Tarjeta */}
                             <div
                                 className={`border-1 border-transparent hover:border-cyan-400 bg-neutral-800 p-6 rounded-xl shadow-lg text-white relative z-10 ${exp.side === "left" ? "md:mr-10 md:ml-0" : "md:ml-10 md:mr-0"} mx-auto w-full md:w-auto`}

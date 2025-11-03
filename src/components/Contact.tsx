@@ -22,11 +22,11 @@ export default function Contact() {
             )
             .then(
                 () => {
-                    setFeedback("¡Message correctly send!");
+                    setFeedback("¡Mensaje enviado correctamente!");
                     form.current?.reset();
                 },
                 () => {
-                    setFeedback("It seems to have failed. Try again");
+                    setFeedback("Parece que ha fallado. Inténtalo de nuevo");
                 }
             )
             .finally(() => setSending(false));
@@ -39,7 +39,7 @@ export default function Contact() {
         >
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-3xl font-bold mb-8 text-left">
-                    Send your project information
+                    Envía la información de tu proyecto
                 </h2>
                 <form
                     ref={form}
@@ -50,14 +50,14 @@ export default function Contact() {
                         <input
                             type="text"
                             name="nombre"
-                            placeholder="Name"
+                            placeholder="Nombre"
                             required
                             className="w-full p-3 rounded bg-neutral-800 text-neutral-100 focus:outline-none focus:ring-2 focus:ring-sky-400"
                         />
                         <input
                             type="text"
                             name="apellido"
-                            placeholder="Last Name"
+                            placeholder="Apellido"
                             required
                             className="w-full p-3 rounded bg-neutral-800 text-neutral-100 focus:outline-none focus:ring-2 focus:ring-sky-400"
                         />
@@ -65,19 +65,19 @@ export default function Contact() {
                     <input
                         type="text"
                         name="empresa"
-                        placeholder="Company (If applicable)"
+                        placeholder="Empresa (si aplica)"
                         className="w-full p-3 rounded bg-neutral-800 text-neutral-100 focus:outline-none focus:ring-2 focus:ring-sky-400"
                     />
                     <input
                         type="email"
                         name="email"
-                        placeholder="Email"
+                        placeholder="Correo electrónico"
                         required
                         className="w-full p-3 rounded bg-neutral-800 text-neutral-100 focus:outline-none focus:ring-2 focus:ring-sky-400"
                     />
                     <textarea
                         name="mensaje"
-                        placeholder="Body of the message"
+                        placeholder="Cuerpo del mensaje"
                         required
                         rows={5}
                         className="w-full p-3 rounded bg-neutral-800 text-neutral-100 focus:outline-none focus:ring-2 focus:ring-sky-400"
@@ -88,7 +88,7 @@ export default function Contact() {
                             className="bg-sky-500 hover:bg-sky-400 text-white font-bold py-3 px-6 rounded transition w-50 cursor-pointer disabled:opacity-50"
                             disabled={sending}
                         >
-                            {sending ? "Sending..." : "Send"}
+                            {sending ? "Enviando..." : "Enviar"}
                         </button>
                     </div>
                     {feedback && (

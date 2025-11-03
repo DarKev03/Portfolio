@@ -1,18 +1,70 @@
 [
   {
     "id": 1,
-    "title": "MyRecipes",
-    "description": "App to manage and plan personalised recipes created with Flutter, Spring Boot and Supabase.",
-    "image": "",
+    "title": "MyRecipes - TFG",
+    "description": "App para manejar recetas personalizadas. Incluye la creación de recetas, planificación de comidas, gestión de ingredientes y autenticación de usuarios.",
+    "technologies": [
+      "Flutter",
+      "Spring Boot",
+      "Supabase"
+    ],
+    "image": "/projects/logo_myrecipes.png",
+    "images": [
+      "public/projects/TFG/IMG_6551.PNG",
+      "public/projects/TFG/IMG_6553.PNG",
+      "public/projects/TFG/IMG_6554.PNG",
+      "public/projects/TFG/IMG_6555.PNG",
+      "public/projects/TFG/IMG_6558.PNG",
+      "public/projects/TFG/IMG_6559.PNG",
+      "public/projects/TFG/IMG_6560.PNG",
+      "public/projects/TFG/IMG_6562.PNG",
+      "public/projects/TFG/IMG_6566.PNG",
+      "public/projects/TFG/IMG_6567.PNG"
+    ],
     "url": "",
     "github": "https://github.com/DarKev03/MyRecipesApp"
   },
   {
     "id": 2,
     "title": "JPMultitarea",
-    "description": "Landing page for a company that offers multiple services, built with React and Tailwind.",
-    "image": "/project_photo.png",
+    "description": "Landing page para empresa de reformas. Diseñada con un enfoque moderno y profesional, cómdoda y atractiva para llamar la atención de potenciales clientes.",
+    "technologies": [
+      "React",
+      "Tailwind CSS"
+    ],
+    "image": "/projects/JP Multitarea/Logo_jp.png",
+    "images": [
+      "/projects/JP Multitarea/Captura de pantalla 2025-11-03 120544.png",
+      "/projects/JP Multitarea/Captura de pantalla 2025-11-03 120656.png",
+      "/projects/JP Multitarea/Captura de pantalla 2025-11-03 120738.png"
+    ],
     "url": "https://jp-multitarea.vercel.app/",
-    "github": "https://jp-multitarea.vercel.app/"
+    "github": ""
+  },
+  {
+    "id": 3,
+    "title": "Gangazon Fichajes",
+    "description": "App móvil para gestionar el tiempo y asistencia de los empleados. Los usuarios pueden gestionar sus vacaciones, horas de trabajo, subir documentos y más.",
+    "technologies": [
+      "Flutter",
+      "Supabase"
+    ],
+    "image": "/projects/logo_gangazon-removebg-preview.png",
+    "images": [],
+    "url": "",
+    "github": ""
+  },
+  {
+    "id": 4,
+    "title": "Valencia Outdoor",
+    "description": "App para la gestión de una empresa de publicidad exterior. Construida con Flutter y Supabase, incluye actualizaciones en tiempo real y generación automatizada de informes y tareas.",
+    "technologies": [
+      "Flutter",
+      "Supabase"
+    ],
+    "image": "/projects/Valencia Outdoor/logo-valencia-outdoor.png.webp",
+    "images": [],
+    "url": "",
+    "github": ""
   }
 ]
