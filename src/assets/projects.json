@@ -10,8 +10,16 @@
     ],
     "image": "/projects/logo_myrecipes.png",
     "images": [
-      "/project_photo.png",
-      "/project_photo.png"
+      "public/projects/TFG/IMG_6551.PNG",
+      "public/projects/TFG/IMG_6553.PNG",
+      "public/projects/TFG/IMG_6554.PNG",
+      "public/projects/TFG/IMG_6555.PNG",
+      "public/projects/TFG/IMG_6558.PNG",
+      "public/projects/TFG/IMG_6559.PNG",
+      "public/projects/TFG/IMG_6560.PNG",
+      "public/projects/TFG/IMG_6562.PNG",
+      "public/projects/TFG/IMG_6566.PNG",
+      "public/projects/TFG/IMG_6567.PNG"
     ],
     "url": "",
     "github": "https://github.com/DarKev03/MyRecipesApp"
