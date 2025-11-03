@@ -1,26 +1,26 @@
 const experiences = [
     {
-        title: "FullStack Developer",
-        company: "Metrica S.L – Founder & FullStack Developer.",
-        date: "Apr 2025 – Current",
+        title: "Desarrollador FullStack",
+        company: "Métrica S.L – Fundador y Desarrollador FullStack.",
+        date: "Abr 2025 – Actualidad",
         description:
-            "Launched my own software development company, delivering end-to-end solutions for mobile, web, and desktop. Clients include Valencia Outdoor, Gangazon, and JibilHedi. Focus on building scalable apps with React, .NET, and modern cloud infrastructures.",
+            "Lancé mi propia empresa de desarrollo de software, entregando soluciones completas para móvil, web y escritorio. Los clientes incluyen Valencia Outdoor, Gangazon y JibilHedi. Enfoque en crear aplicaciones escalables con React, .NET e infraestructuras cloud modernas.",
         side: "right",
     },
     {
-        title: "FullStack Developer",
+        title: "Desarrollador FullStack",
         company: "Idrica",
-        date: "Sep 2024 – Current",
+        date: "Sep 2024 – Actualidad",
         description:
-            "Building mobile and backend solutions for smart water management systems. Tech stack: PostgreSQL, .NET MAUI, React, Couchbase. Delivered scalable services improving monitoring and control efficiency across multiple cities.",
+            "Desarrollo de soluciones móviles y backend para sistemas inteligentes de gestión del agua. Stack tecnológico: PostgreSQL, .NET MAUI, React, Couchbase. Entregué servicios escalables que mejoran la eficiencia de monitoreo y control en múltiples ciudades.",
         side: "left",
     },
     {
-        title: "System Analyst",
-        company: "University of Valencia - Pulsia",
-        date: "Feb 2023 – Apr 2024",
+        title: "Analista de Sistemas",
+        company: "Universidad de Valencia - Pulsia",
+        date: "Feb 2023 – Abr 2024",
         description:
-            "Managed and optimized IT systems for the University of Valencia, improving reliability and performance of academic platforms.",
+            "Gestioné y optimicé sistemas informáticos para la Universidad de Valencia, mejorando la fiabilidad y rendimiento de las plataformas académicas.",
         side: "right",
     },
 ];

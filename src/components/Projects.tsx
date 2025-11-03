@@ -6,6 +6,7 @@ type Project = {
     id: number;
     title: string;
     description: string;
+    technologies: string[];
     image: string;
     images?: string[];
     url: string;
@@ -49,8 +50,8 @@ export default function Projects() {
             id="projects"
             className="bg-neutral-900 text-neutral-100 py-20 px-6 border-t border-neutral-800"
         >
-            <h2 className="text-3xl font-bold mb-4 text-center">Projects</h2>
-            <div className="flex flex-col md:flex-row flex-wrap gap-8 mx-auto justify-center">
+            <h2 className="text-3xl font-bold mb-4 text-center">Proyectos destacados</h2>
+            <div className="flex flex-col md:flex-row flex-wrap gap-8 mx-auto justify-center pt-2">
                 {projects.map((project) => (
                     <div
                         key={project.id}
@@ -65,7 +66,7 @@ export default function Projects() {
                             />
                         ) : (
                             <div className="w-full h-40 bg-neutral-700 rounded mb-4 flex items-center justify-center">
-                                <span className="text-neutral-500">No Image Available</span>
+                                <span className="text-neutral-500">Sin imagen disponible</span>
                             </div>
                         )}
                         <h3 className="text-xl font-semibold mb-2">
@@ -113,12 +114,12 @@ export default function Projects() {
 
             {/* Modal */}
             {selectedProject && (
-                <div 
-                    className="fixed inset-0 flex items-center justify-center z-50 p-4" 
+                <div
+                    className="fixed inset-0 flex items-center justify-center z-50 p-4"
                     style={{ backgroundColor: '#171717' }}
                     onClick={closeModal}
                 >
-                    <div 
+                    <div
                         className="bg-neutral-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
                         onClick={(e) => e.stopPropagation()}
                     >
@@ -138,7 +139,7 @@ export default function Projects() {
                                             <img
                                                 src={selectedProject.images[currentImageIndex]}
                                                 alt={selectedProject.title}
-                                                className="w-full h-full md:h-96 object-cover rounded-lg"
+                                                className="w-full h-full md:h-96 object-contain rounded-lg"
                                             />
 
                                             {selectedProject.images.length > 1 && (
@@ -163,8 +164,8 @@ export default function Projects() {
                                                                 key={index}
                                                                 onClick={() => setCurrentImageIndex(index)}
                                                                 className={`w-2 h-2 rounded-full transition ${index === currentImageIndex
-                                                                        ? 'bg-sky-400'
-                                                                        : 'bg-neutral-600 hover:bg-neutral-500'
+                                                                    ? 'bg-sky-400'
+                                                                    : 'bg-neutral-600 hover:bg-neutral-500'
                                                                     }`}
                                                             />
                                                         ))}
@@ -180,7 +181,7 @@ export default function Projects() {
                                         />
                                     ) : (
                                         <div className="w-full h-64 md:h-96 bg-neutral-700 rounded-lg flex items-center justify-center">
-                                            <span className="text-neutral-500">No Image Available</span>
+                                            <span className="text-neutral-500">Sin imagen disponible</span>
                                         </div>
                                     )}
                                 </div>
@@ -190,6 +191,8 @@ export default function Projects() {
                                 <p className="text-neutral-300 mb-6 text-lg leading-relaxed">
                                     {selectedProject.description}
                                 </p>
+
+                                <p>{selectedProject.technologies.join(", ")}</p>
 
                                 {/* Links */}
                                 <div className="flex justify-center gap-8 text-3xl">

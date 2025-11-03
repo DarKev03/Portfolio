@@ -3,11 +3,11 @@ import { useState } from "react";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const sections = [
-    { id: "hero", label: "Home" },
-    { id: "skills", label: "Skills" },
-    { id: "about", label: "About me" },
-    { id: "projects", label: "Projects" },
-    { id: "contact", label: "Contact" },
+    { id: "hero", label: "Inicio" },
+    { id: "skills", label: "Habilidades" },
+    { id: "about", label: "Sobre mí" },
+    { id: "projects", label: "Proyectos" },
+    { id: "contact", label: "Contacto" },
   ];
   return (
     <nav className="sticky top-0 z-50 bg-neutral-900 backdrop-blur border-b border-neutral-800">
@@ -15,7 +15,7 @@ export default function Navbar() {
         {/* Hamburger icon */}
         <button
           className="md:hidden flex flex-col gap-1 focus:outline-none"
-          aria-label="Open menu"
+          aria-label="Abrir menú"
           onClick={() => setOpen((o) => !o)}
         >
           <span className={`block h-0.5 w-6 bg-neutral-200 transition-all ${open ? 'rotate-45 translate-y-1.5' : ''}`}></span>

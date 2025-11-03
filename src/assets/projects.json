@@ -2,7 +2,12 @@
   {
     "id": 1,
     "title": "MyRecipes - TFG",
-    "description": "App to manage and plan personalised recipes created with Flutter, Spring Boot and Supabase. Features include recipe creation, meal planning, ingredient management, and user authentication.",
+    "description": "App para manejar recetas personalizadas. Incluye la creación de recetas, planificación de comidas, gestión de ingredientes y autenticación de usuarios.",
+    "technologies": [
+      "Flutter",
+      "Spring Boot",
+      "Supabase"
+    ],
     "image": "/projects/logo_myrecipes.png",
     "images": [
       "/project_photo.png",
@@ -14,11 +19,16 @@
   {
     "id": 2,
     "title": "JPMultitarea",
-    "description": "Landing page for a company that offers multiple services, built with React and Tailwind. Responsive design with modern animations and contact forms.",
-    "image": "/projects/Logo_jp.png",
+    "description": "Landing page para empresa de reformas. Diseñada con un enfoque moderno y profesional, cómdoda y atractiva para llamar la atención de potenciales clientes.",
+    "technologies": [
+      "React",
+      "Tailwind CSS"
+    ],
+    "image": "/projects/JP Multitarea/Logo_jp.png",
     "images": [
-      "/project_photo.png",
-      "/project_photo.png"
+      "/projects/JP Multitarea/Captura de pantalla 2025-11-03 120544.png",
+      "/projects/JP Multitarea/Captura de pantalla 2025-11-03 120656.png",
+      "/projects/JP Multitarea/Captura de pantalla 2025-11-03 120738.png"
     ],
     "url": "https://jp-multitarea.vercel.app/",
     "github": ""
@@ -26,7 +36,11 @@
   {
     "id": 3,
     "title": "Gangazon Fichajes",
-    "description": "Mobile app to manage time and attendance of employees. Users are able to manage their vacations, work hours, upload documents and more. Built with Flutter and Supabase.",
+    "description": "App móvil para gestionar el tiempo y asistencia de los empleados. Los usuarios pueden gestionar sus vacaciones, horas de trabajo, subir documentos y más.",
+    "technologies": [
+      "Flutter",
+      "Supabase"
+    ],
     "image": "/projects/logo_gangazon-removebg-preview.png",
     "images": [
       "/project_photo.png",
@@ -38,11 +52,14 @@
   {
     "id": 4,
     "title": "Valencia Outdoor",
-    "description": "Multiplatform app for management of an outdoor advertising company. Built with Flutter and Supabase with real-time updates and automated reporting creation.",
-    "image": "/projects/logo-valencia-outdoor.png.webp",
+    "description": "App para la gestión de una empresa de publicidad exterior. Construida con Flutter y Supabase, incluye actualizaciones en tiempo real y generación automatizada de informes y tareas.",
+    "technologies": [
+      "Flutter",
+      "Supabase"
+    ],
+    "image": "/projects/Valencia Outdoor/logo-valencia-outdoor.png.webp",
     "images": [
-      "/Captura de pantalla 2025-09-12 a las 11.44.18.png",
-      "/project_photo.png"
+      "/projects/Valencia Outdoor/Captura de pantalla 2025-09-12 a las 11.44.18.png"
     ],
     "url": "",
     "github": ""
