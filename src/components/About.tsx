@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
+import { FaBriefcase, FaGlassCheers } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 import Timeline from "./TimeLine";
+
 
 export default function About() {
   const [activeTab, setActiveTab] = useState("sobre mí");
   const tabs = ["sobre mí", "trayectoria", "descargar CV"];
+  const [image, setImage] = useState("perfil_2.JPEG");
 
   useEffect(() => {
     if (activeTab === "descargar CV") {
@@ -16,6 +20,10 @@ export default function About() {
       setActiveTab("sobre mí");
     }
   }, [activeTab]);
+
+  function changeImage(img: string) {
+    setImage(img);
+  }
 
   return (
     <section
@@ -59,12 +67,43 @@ Esta experiencia me llevó a cofundar la consultora Métrica S.L., donde me dese
 
 Hoy en día tengo como objetivo seguir creciendo y desarrollándome en mi área, intentando contribuir en proyectos que puedan aportar valor real que faciliten y traigan beneficio a la vida de las personas.`}
           </p>
-          <img
-            src="/perfil.jpeg"
-            alt="Kevin García"
-            className="border-4 border-neutral-800 w-40 md:w-100 rounded-lg object-cover"
-            loading="lazy"
-          />
+          <div>
+            <div className="relative w-40 h-40 md:w-100 md:h-100 overflow-hidden rounded-lg border-4 border-neutral-800">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={image}
+                  src={`/${image}`}
+                  alt="Kevin García"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 1.05 }}
+                  transition={{ 
+                    duration: 0.4,
+                    ease: "easeInOut"
+                  }}
+                />
+              </AnimatePresence>
+            </div>
+            <div className="bg-neutral-800 p-4 rounded-lg shadow-md mt-2 flex flex-col gap-2">
+              <button 
+                className={`text-sm font-semibold text-neutral-300 hover:text-neutral-100 bg-neutral-700 rounded-full px-4 py-2 flex items-center justify-center gap-2 transition cursor-pointer ${image === "perfil.jpeg" ? "ring-2 ring-sky-500" : ""}`} 
+                onClick={() => changeImage("perfil.jpeg")}
+              >
+                <FaBriefcase className="text-lg" />
+                <span>Lunes</span>
+              </button>
+              <button 
+                className={`text-sm font-semibold text-neutral-300 hover:text-neutral-100 bg-neutral-700 rounded-full px-4 py-2 flex items-center justify-center gap-2 transition cursor-pointer ${image === "perfil_2.JPEG" ? "ring-2 ring-sky-500" : ""}`} 
+                onClick={() => changeImage("perfil_2.JPEG")}
+              >
+                <FaGlassCheers className="text-lg" />
+                <span>Viernes</span>
+              </button>
+            </div>
+          </div>
+
         </div>
       )}
       {activeTab === "trayectoria" && (
