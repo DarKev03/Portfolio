@@ -50,10 +50,7 @@
       "Supabase"
     ],
     "image": "/projects/logo_gangazon-removebg-preview.png",
-    "images": [
-      "/project_photo.png",
-      "/project_photo.png"
-    ],
+    "images": [],
     "url": "",
     "github": ""
   },
@@ -66,9 +63,7 @@
       "Supabase"
     ],
     "image": "/projects/Valencia Outdoor/logo-valencia-outdoor.png.webp",
-    "images": [
-      "/projects/Valencia Outdoor/Captura de pantalla 2025-09-12 a las 11.44.18.png"
-    ],
+    "images": [],
     "url": "",
     "github": ""
   }
