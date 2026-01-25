@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaBriefcase, FaUmbrellaBeach } from "react-icons/fa";
+// import { FaBriefcase, FaUmbrellaBeach } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import Timeline from "./TimeLine";
 
@@ -7,7 +7,15 @@ import Timeline from "./TimeLine";
 export default function About() {
   const [activeTab, setActiveTab] = useState("sobre mí");
   const tabs = ["sobre mí", "trayectoria", "descargar CV"];
-  const [image, setImage] = useState("perfil_2.JPEG");
+  // const [image, setImage] = useState("perfil_2.JPEG");
+
+  const image = "perfil.jpeg";
+
+  const aboutMeText = `Soy desarrollador Full Stack especializado en crear soluciones dinámicas, limpias y escalables. Adapto mi stack tecnológico a las necesidades de cada proyecto para garantizar la máxima calidad y robustez, manteniéndome siempre a la vanguardia de las tendencias del sector.
+
+Mi trayectoria incluye tanto proyectos colaborativos en empresas referentes como el desarrollo de soluciones a medida para negocios locales. Mi enfoque no es solo programar, sino optimizar procesos para aportar un valor real y tangible a cada negocio.
+
+Sigo en constante crecimiento y evolución profesional. Si tienes una idea o un proceso que necesite digitalizarse, hablemos.`;
 
   useEffect(() => {
     if (activeTab === "descargar CV") {
@@ -21,9 +29,9 @@ export default function About() {
     }
   }, [activeTab]);
 
-  function changeImage(img: string) {
-    setImage(img);
-  }
+  // function changeImage(img: string) {
+  //   setImage(img);
+  // }
 
   return (
     <section
@@ -55,17 +63,7 @@ export default function About() {
       {activeTab === "sobre mí" && (
         <div className="flex flex-col md:flex-row items-center gap-20 md:gap-25 max-w-6xl mx-auto justify-between pb-4">
           <p className="text-lg text-neutral-400 text-left md:w-1/2 whitespace-pre-line">
-            {`Soy desarrollador de software full stack. Me especializo en crear soluciones dinámicas, limpias y escalables ya sean web, móviles o multiplataforma.
-
-Adapto mi stack tecnológico a las necesidades de cada proyecto. Para desarrollo web suelo trabajar con React y Spring Boot, mientras que en entornos móviles utilizo Flutter con Spring Boot. Me manejo con bases de datos relacionales y no relacionales, y me mantengo siempre al día con las últimas tendencias del sector.
-
-Durante estos años he trabajado en diversos proyectos tanto personales como colaborativos. Esto me ha ayudado a crecer como profesional y alcanzar nuevos conocimientos que me gusta plasmar en cada cosa que hago.
-
-He trabajado en empresas reconocidas como ViewNext e Idrica (donde actualmente desempeño mi labor), además de desarrollar soluciones a medida para distintos clientes de mi localidad. 
-
-Esta experiencia me llevó a cofundar la consultora Métrica S.L., donde me desempeño activamente en el desarrollo y gestión de proyectos tecnológicos.
-
-Hoy en día tengo como objetivo seguir creciendo y desarrollándome en mi área, intentando contribuir en proyectos que puedan aportar valor real que faciliten y traigan beneficio a la vida de las personas.`}
+            {aboutMeText}
           </p>
           <div>
             <div className="relative w-80 h-80 md:w-100 md:h-100 overflow-hidden rounded-lg border-4 border-neutral-800">
@@ -86,7 +84,8 @@ Hoy en día tengo como objetivo seguir creciendo y desarrollándome en mi área,
                 />
               </AnimatePresence>
             </div>
-            <div className="bg-neutral-800 p-4 rounded-lg shadow-md mt-2 flex flex-col gap-2">
+
+            {/* <div className="bg-neutral-800 p-4 rounded-lg shadow-md mt-2 flex flex-col gap-2">
               <button 
                 className={`text-sm font-semibold text-neutral-300 hover:text-neutral-100 bg-neutral-700 rounded-full px-4 py-2 flex items-center justify-center gap-2 transition cursor-pointer ${image === "perfil.jpeg" ? "ring-2 ring-sky-500" : ""}`} 
                 onClick={() => changeImage("perfil.jpeg")}
@@ -101,7 +100,8 @@ Hoy en día tengo como objetivo seguir creciendo y desarrollándome en mi área,
                 <FaUmbrellaBeach className="text-lg" />
                 <span>Viernes</span>
               </button>
-            </div>
+            </div> */}
+            
           </div>
 
         </div>

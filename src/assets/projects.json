@@ -3,6 +3,7 @@
     "id": 1,
     "title": "MyRecipes - TFG",
     "description": "App para manejar recetas personalizadas. Incluye la creación de recetas, planificación de comidas, gestión de ingredientes y autenticación de usuarios.",
+    "detailed_description": "Se logró desarrollar una aplicación móvil completa y funcional que permite a los usuarios gestionar sus recetas de forma intuitiva. La app incluye un sistema de autenticación seguro, la posibilidad de crear y editar recetas con ingredientes personalizables, planificación de comidas semanales o mensuales, y cálculo automático de compras. El backend proporciona APIs robustas y la base de datos en tiempo real garantiza sincronización instantánea entre dispositivos. La interfaz está optimizada para una experiencia de usuario fluida y accesible.",
     "technologies": [
       "Flutter",
       "Spring Boot",
@@ -28,6 +29,7 @@
     "id": 2,
     "title": "JPMultitarea",
     "description": "Landing page para empresa de reformas. Diseñada con un enfoque moderno y profesional, cómdoda y atractiva para llamar la atención de potenciales clientes.",
+    "detailed_description": "Se creó una landing page profesional y responsiva que cubre todos los servicios de la empresa de reformas. El sitio cuenta con una navegación clara, galerías de proyectos realizados, información de los servicios ofrecidos y optimización SEO. El diseño moderno y limpio genera confianza en los clientes potenciales. La página está completamente optimizada para dispositivos móviles y velocidad de carga.",
     "technologies": [
       "React",
       "Tailwind CSS"
@@ -45,6 +47,7 @@
     "id": 3,
     "title": "Gangazon Fichajes",
     "description": "App móvil para gestionar el tiempo y asistencia de los empleados. Los usuarios pueden gestionar sus vacaciones, horas de trabajo, subir documentos y más.",
+    "detailed_description": "Se desarrolló una aplicación móvil integral para la gestión de recursos humanos. La app permite a los empleados registrar su entrada y salida, solicitar vacaciones, consultar sus horas trabajadas, subir documentos requeridos y recibir notificaciones en tiempo real. Los administradores pueden aprobar solicitudes, generar reportes de asistencia y supervisar el equipo. El sistema incluye validaciones, cálculo automático de horas y un panel de control intuitivo. La sincronización en tiempo real garantiza que toda la información esté actualizada.",
     "technologies": [
       "Flutter",
       "Supabase"
@@ -58,9 +61,11 @@
     "id": 4,
     "title": "Valencia Outdoor",
     "description": "App para la gestión de una empresa de publicidad exterior. Construida con Flutter y Supabase, incluye actualizaciones en tiempo real y generación automatizada de informes y tareas.",
+    "detailed_description": "Se desarrolló una solución multiplataforma (Android y Windows) diseñada para optimizar el ciclo de producción de una empresa de cartelería exterior. El sistema automatiza la creación de órdenes de trabajo mediante el procesamiento de archivos PDF, eliminando la carga administrativa manual.\n\nGracias a un sistema de estados dinámico, el equipo puede asignar, dividir y monitorizar tareas en tiempo real, garantizando el aprovechamiento máximo de materiales y evitando fugas de beneficio. Es un software robusto, escalable y diseñado para operar con un mantenimiento mínimo, permitiendo que el cliente se centre exclusivamente en su producción.",
     "technologies": [
       "Flutter",
-      "Supabase"
+      "Supabase",
+      "Spring Boot"
     ],
     "image": "/projects/Valencia Outdoor/logo-valencia-outdoor.png.webp",
     "images": [],

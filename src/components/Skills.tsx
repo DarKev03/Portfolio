@@ -71,7 +71,7 @@ export default function Skills() {
                             </span>
                             <span className="bg-neutral-800 px-2 py-1 md:px-6 md:py-2 rounded-full text-sm md:text-base font-semibold text-neutral-300 border border-neutral-700 whitespace-nowrap flex items-center">
                                 {skillIcons['Spring Boot']}
-                                Spring Boot
+                                Spring Boot                                
                             </span>
                             <span className="bg-neutral-800 px-2 py-1 md:px-6 md:py-2 rounded-full text-sm md:text-base font-semibold text-neutral-300 border border-neutral-700 whitespace-nowrap flex items-center">
                                 {skillIcons['Supabase']}

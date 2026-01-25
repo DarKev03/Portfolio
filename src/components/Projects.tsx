@@ -8,6 +8,7 @@ type Project = {
     id: number;
     title: string;
     description: string;
+    detailed_description?: string;
     technologies: string[];
     image: string;
     images?: string[];
@@ -200,7 +201,7 @@ export default function Projects() {
                                         </>
                                     ) : (
                                         <div className="w-full h-64 md:h-96 bg-neutral-700 rounded-lg flex items-center justify-center">
-                                            <span className="text-neutral-500">Sin imagen disponible</span>
+                                            <span className="text-neutral-500">No disponible por confidencialidad</span>
                                         </div>
                                     )}
                                 </div>
@@ -222,7 +223,7 @@ export default function Projects() {
                                 </div>
 
                                 <p className="text-neutral-300 mb-6 text-lg leading-relaxed">
-                                    {selectedProject.description}
+                                    {selectedProject.detailed_description}
                                 </p>
 
                                 {/* Links */}
