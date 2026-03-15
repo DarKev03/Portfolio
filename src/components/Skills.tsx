@@ -6,100 +6,118 @@ import { MdOutlineGroupWork } from "react-icons/md";
 import type { ReactElement } from "react";
 
 const skillIcons: { [key: string]: ReactElement } = {
-    'React': <FaReact className="inline mr-1.5" />,
-    'TypeScript': <SiTypescript className="inline mr-1.5" />,
-    'Tailwind': <SiTailwindcss className="inline mr-1.5" />,
-    'Node.js': <FaNodeJs className="inline mr-1.5" />,
-    'Vite': <SiVite className="inline mr-1.5" />,
-    'Next.js': <SiNextdotjs className="inline mr-1.5" />,
-    'Flutter': <SiFlutter className="inline mr-1.5" />,
-    'SQL': <SiMysql className="inline mr-1.5" />,
-    '.NET': <SiDotnet className="inline mr-1.5" />,
-    'Firebase': <SiFirebase className="inline mr-1.5" />,
-    'Spring Boot': <SiSpringboot className="inline mr-1.5" />,
-    'REST APIs': <TbApi className="inline mr-1.5" />,
-    'Git': <FaGitAlt className="inline mr-1.5" />,
-    'Docker': <FaDocker className="inline mr-1.5" />,
-    'Agile Methodologies': <MdOutlineGroupWork className="inline mr-1.5" />,
-    'UI/UX Design': <TbPalette className="inline mr-1.5" />,
-    'Supabase': <SiSupabase className="inline mr-1.5" />,
+    'React': <FaReact />,
+    'TypeScript': <SiTypescript />,
+    'Tailwind': <SiTailwindcss />,
+    'Node.js': <FaNodeJs />,
+    'Vite': <SiVite />,
+    'Next.js': <SiNextdotjs />,
+    'Flutter': <SiFlutter />,
+    'SQL': <SiMysql />,
+    '.NET': <SiDotnet />,
+    'Firebase': <SiFirebase />,
+    'Spring Boot': <SiSpringboot />,
+    'APIs REST': <TbApi />,
+    'Git': <FaGitAlt />,
+    'Docker': <FaDocker />,
+    'Metodologías Ágiles': <MdOutlineGroupWork />,
+    'Diseño UI/UX': <TbPalette />,
+    'Supabase': <SiSupabase />,
 };
 
-const skills = ['React', 'TypeScript', 'Tailwind', 'Node.js', 'Vite', 'Next.js', 'Flutter', 'SQL', '.NET', 'Firebase', 'Spring Boot', 'REST APIs', 'Git', 'Docker', 'Agile Methodologies', 'UI/UX Design'];
+const skills = ['React', 'TypeScript', 'Tailwind', 'Node.js', 'Vite', 'Next.js', 'Flutter', 'SQL', '.NET', 'Firebase', 'Spring Boot', 'APIs REST', 'Git', 'Docker', 'Metodologías Ágiles', 'Diseño UI/UX'];
 
 export default function Skills() {
     return (
         <section
             id="skills"
-            className="bg-neutral-900 text-neutral-100 py-20 px-6 text-center border-t border-neutral-800"
+            className="bg-neutral-900 text-neutral-100 py-24 px-6 relative overflow-hidden"
         >
-            <h2 className="text-3xl font-bold mb-8">Habilidades</h2>
-            <div className="overflow-hidden max-w-6xl mx-auto">
-                <motion.div
-                    className="flex gap-6"
-                    animate={{ x: ["0%", "-50%"] }}
-                    transition={{
-                        repeat: Infinity,
-                        repeatType: "loop",
-                        duration: 60,
-                        ease: "linear",
-                    }}
-                    style={{ width: "max-content" }}
-                >
-                    {[...skills, ...skills, ...skills].map((skill, idx) => (
-                        <span
-                            key={idx}
-                            className="bg-neutral-800 px-6 py-2 rounded-full text-base font-semibold text-neutral-300 border border-neutral-700 whitespace-nowrap flex items-center"
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="max-w-7xl mx-auto"
+            >
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-sky-400 inline-block">
+                        Habilidades y Tecnologías
+                    </h2>
+                    <p className="text-neutral-400 max-w-2xl mx-auto text-lg">
+                        Dominio de herramientas modernas para construir productos digitales escalables y de alta calidad.
+                    </p>
+                </div>
+
+                {/* Marquee - Monochromatic */}
+                <div className="relative mb-24">
+                    <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-neutral-900 to-transparent z-10" />
+                    <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-neutral-900 to-transparent z-10" />
+                    
+                    <div className="overflow-hidden py-4">
+                        <motion.div
+                            className="flex gap-8"
+                            animate={{ x: ["0%", "-50%"] }}
+                            transition={{
+                                repeat: Infinity,
+                                repeatType: "loop",
+                                duration: 40,
+                                ease: "linear",
+                            }}
+                            style={{ width: "max-content" }}
                         >
-                            {skillIcons[skill]}
-                            {skill}
-                        </span>
-                    ))}
-                </motion.div>
-            </div>
-
-            {/* Stack Principal */}
-            <div className="max-w-6xl mx-auto mt-16">
-                <div className="flex flex-col md:flex-row gap-15 justify-center">
-                    {/* Web Stack */}
-                    <div>
-                        <h4 className="text-lg font-semibold mb-4 text-sky-400">Web</h4>
-                        <div className="flex flex-wrap gap-3 justify-center">
-                            <span className="bg-neutral-800 px-2 py-1 md:px-6 md:py-2 rounded-full text-sm md:text-base font-semibold text-neutral-300 border border-neutral-700 whitespace-nowrap flex items-center">
-                                {skillIcons['React']}
-                                React
-                            </span>
-                            <span className="bg-neutral-800 px-2 py-1 md:px-6 md:py-2 rounded-full text-sm md:text-base font-semibold text-neutral-300 border border-neutral-700 whitespace-nowrap flex items-center">
-                                {skillIcons['Spring Boot']}
-                                Spring Boot                                
-                            </span>
-                            <span className="bg-neutral-800 px-2 py-1 md:px-6 md:py-2 rounded-full text-sm md:text-base font-semibold text-neutral-300 border border-neutral-700 whitespace-nowrap flex items-center">
-                                {skillIcons['Supabase']}
-                                Supabase
-                            </span>
-                        </div>
-                    </div>
-
-                    {/* Mobile Stack */}
-                    <div>
-                        <h4 className="text-lg font-semibold mb-4 text-sky-400">Mobile</h4>
-                        <div className="flex flex-wrap gap-3 justify-center">
-                            <span className="bg-neutral-800 px-2 py-1 md:px-6 md:py-2 rounded-full text-sm md:text-base font-semibold text-neutral-300 border border-neutral-700 whitespace-nowrap flex items-center">
-                                {skillIcons['Flutter']}
-                                Flutter
-                            </span>
-                            <span className="bg-neutral-800 px-2 py-1 md:px-6 md:py-2 rounded-full text-sm md:text-base font-semibold text-neutral-300 border border-neutral-700 whitespace-nowrap flex items-center">
-                                {skillIcons['Spring Boot']}
-                                Spring Boot
-                            </span>
-                            <span className="bg-neutral-800 px-2 py-1 md:px-6 md:py-2 rounded-full text-sm md:text-base font-semibold text-neutral-300 border border-neutral-700 whitespace-nowrap flex items-center">
-                                {skillIcons['Supabase']}
-                                Supabase
-                            </span>
-                        </div>
+                            {[...skills, ...skills].map((skill, idx) => (
+                                <div
+                                    key={idx}
+                                    className="bg-neutral-800/40 backdrop-blur-sm px-8 py-3 rounded-2xl text-base font-bold text-neutral-300 border border-neutral-700/50 whitespace-nowrap flex items-center gap-3 hover:border-sky-500/30 hover:text-white transition-colors cursor-default"
+                                >
+                                    <span className="text-sky-400 text-xl">{skillIcons[skill]}</span>
+                                    {skill}
+                                </div>
+                            ))}
+                        </motion.div>
                     </div>
                 </div>
-            </div>
+
+                {/* Stacks Principales - Monochromatic */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    {/* Web Stack */}
+                    <motion.div 
+                        whileHover={{ y: -5 }}
+                        className="bg-neutral-800/30 backdrop-blur-md p-8 rounded-3xl border border-neutral-700/50 shadow-xl"
+                    >
+                        <div className="w-12 h-12 bg-sky-500/10 rounded-2xl flex items-center justify-center text-sky-400 mb-6 border border-sky-500/20">
+                            <TbApi size={24} />
+                        </div>
+                        <h4 className="text-2xl font-bold mb-6 text-white text-left">Ecosistema Web</h4>
+                        <div className="flex flex-wrap gap-3">
+                            {['React', 'Spring Boot', 'Supabase', 'TypeScript', 'Tailwind'].map((s) => (
+                                <span key={s} className="bg-neutral-900/50 px-4 py-2 rounded-xl text-sm font-semibold text-neutral-400 border border-neutral-800 flex items-center gap-2">
+                                    <span className="text-sky-400">{skillIcons[s]}</span> {s}
+                                </span>
+                            ))}
+                        </div>
+                    </motion.div>
+
+                    {/* Mobile Stack */}
+                    <motion.div 
+                        whileHover={{ y: -5 }}
+                        className="bg-neutral-800/30 backdrop-blur-md p-8 rounded-3xl border border-neutral-700/50 shadow-xl"
+                    >
+                        <div className="w-12 h-12 bg-sky-500/10 rounded-2xl flex items-center justify-center text-sky-400 mb-6 border border-sky-500/20">
+                            <SiFlutter size={24} />
+                        </div>
+                        <h4 className="text-2xl font-bold mb-6 text-white text-left">Soluciones Móviles</h4>
+                        <div className="flex flex-wrap gap-3">
+                            {['Flutter', 'Spring Boot', 'Supabase', 'Firebase', 'APIs REST'].map((s) => (
+                                <span key={s} className="bg-neutral-900/50 px-4 py-2 rounded-xl text-sm font-semibold text-neutral-400 border border-neutral-800 flex items-center gap-2">
+                                    <span className="text-sky-400">{skillIcons[s]}</span> {s}
+                                </span>
+                            ))}
+                        </div>
+                    </motion.div>
+                </div>
+            </motion.div>
         </section>
     );
 }

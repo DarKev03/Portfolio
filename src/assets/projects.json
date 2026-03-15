@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "title": "MyRecipes - TFG",
-    "description": "App para manejar recetas personalizadas. Incluye la creación de recetas, planificación de comidas, gestión de ingredientes y autenticación de usuarios.",
-    "detailed_description": "Se logró desarrollar una aplicación móvil completa y funcional que permite a los usuarios gestionar sus recetas de forma intuitiva. La app incluye un sistema de autenticación seguro, la posibilidad de crear y editar recetas con ingredientes personalizables, planificación de comidas semanales o mensuales, y cálculo automático de compras. El backend proporciona APIs robustas y la base de datos en tiempo real garantiza sincronización instantánea entre dispositivos. La interfaz está optimizada para una experiencia de usuario fluida y accesible.",
+    "title": "Centro Inteligente de Recetas y Nutrición",
+    "description": "Aplicación móvil multiplataforma para la gestión personalizada de recetas, planificación de comidas y seguimiento automatizado de ingredientes.",
+    "detailed_description": "Una solución móvil completa desarrollada con Flutter y Spring Boot, con una base de datos en tiempo real con Supabase. La aplicación ofrece una sólida autenticación de usuarios, creación intuitiva de recetas con parámetros personalizables, planificación de comidas semanal/mensual y generación automática de listas de la compra basada en las recetas elegidas. Optimizada para un alto rendimiento y accesibilidad.",
     "technologies": [
       "Flutter",
       "Spring Boot",
@@ -11,25 +11,26 @@
     ],
     "image": "/projects/logo_myrecipes.png",
     "images": [
-      "public/projects/TFG/IMG_6551.PNG",
-      "public/projects/TFG/IMG_6553.PNG",
-      "public/projects/TFG/IMG_6554.PNG",
-      "public/projects/TFG/IMG_6555.PNG",
-      "public/projects/TFG/IMG_6558.PNG",
-      "public/projects/TFG/IMG_6559.PNG",
-      "public/projects/TFG/IMG_6560.PNG",
-      "public/projects/TFG/IMG_6562.PNG",
-      "public/projects/TFG/IMG_6566.PNG",
-      "public/projects/TFG/IMG_6567.PNG"
+      "/projects/TFG/IMG_6551.PNG",
+      "/projects/TFG/IMG_6553.PNG",
+      "/projects/TFG/IMG_6554.PNG",
+      "/projects/TFG/IMG_6555.PNG",
+      "/projects/TFG/IMG_6558.PNG",
+      "/projects/TFG/IMG_6559.PNG",
+      "/projects/TFG/IMG_6560.PNG",
+      "/projects/TFG/IMG_6562.PNG",
+      "/projects/TFG/IMG_6566.PNG",
+      "/projects/TFG/IMG_6567.PNG"
     ],
     "url": "",
-    "github": "https://github.com/DarKev03/MyRecipesApp"
+    "github": "https://github.com/DarKev03/MyRecipesApp",
+    "isFeatured": true
   },
   {
     "id": 2,
-    "title": "JPMultitarea",
-    "description": "Landing page para empresa de reformas. Diseñada con un enfoque moderno y profesional, cómdoda y atractiva para llamar la atención de potenciales clientes.",
-    "detailed_description": "Se creó una landing page profesional y responsiva que cubre todos los servicios de la empresa de reformas. El sitio cuenta con una navegación clara, galerías de proyectos realizados, información de los servicios ofrecidos y optimización SEO. El diseño moderno y limpio genera confianza en los clientes potenciales. La página está completamente optimizada para dispositivos móviles y velocidad de carga.",
+    "title": "Landing Page de Servicios Moderna",
+    "description": "Página de aterrizaje de alta conversión para una empresa de servicios profesionales, con un diseño moderno, elegante y optimización SEO.",
+    "detailed_description": "Arquitecturé y desarrollé una landing page receptiva y de alto rendimiento enfocada en la generación de leads. Construida con React y Tailwind CSS, el sitio incluye galerías de proyectos dinámicas, categorización de servicios y posicionamiento SEO estratégico. La interfaz sigue principios de diseño premium para establecer la autoridad de la marca y la confianza del usuario.",
     "technologies": [
       "React",
       "Tailwind CSS"
@@ -41,13 +42,14 @@
       "/projects/JP Multitarea/Captura de pantalla 2025-11-03 120738.png"
     ],
     "url": "https://jp-multitarea.vercel.app/",
-    "github": ""
+    "github": "",
+    "isFeatured": true
   },
   {
-    "id": 3,
-    "title": "Gangazon Fichajes",
-    "description": "App móvil para gestionar el tiempo y asistencia de los empleados. Los usuarios pueden gestionar sus vacaciones, horas de trabajo, subir documentos y más.",
-    "detailed_description": "Se desarrolló una aplicación móvil integral para la gestión de recursos humanos. La app permite a los empleados registrar su entrada y salida, solicitar vacaciones, consultar sus horas trabajadas, subir documentos requeridos y recibir notificaciones en tiempo real. Los administradores pueden aprobar solicitudes, generar reportes de asistencia y supervisar el equipo. El sistema incluye validaciones, cálculo automático de horas y un panel de control intuitivo. La sincronización en tiempo real garantiza que toda la información esté actualizada.",
+    "id": 2,
+    "title": "Gestión Empresarial de Personal",
+    "description": "Una solución de RR.HH. robusta para el seguimiento del tiempo de los empleados, la gestión de turnos y el manejo de documentos digitales.",
+    "detailed_description": "Aplicación móvil empresarial interna diseñada para agilizar los procesos de RR.HH. El personal puede registrar la asistencia mediante geofencing o códigos QR, solicitar vacaciones y subir documentación directamente desde sus dispositivos. El backend utiliza Supabase para actualizaciones en tiempo real y almacenamiento seguro. Redujo significativamente la carga administrativa para el cliente.",
     "technologies": [
       "Flutter",
       "Supabase"
@@ -55,13 +57,14 @@
     "image": "/projects/logo_gangazon-removebg-preview.png",
     "images": [],
     "url": "",
-    "github": ""
+    "github": "",
+    "isFeatured": false
   },
   {
     "id": 4,
-    "title": "Valencia Outdoor",
-    "description": "App para la gestión de una empresa de publicidad exterior. Construida con Flutter y Supabase, incluye actualizaciones en tiempo real y generación automatizada de informes y tareas.",
-    "detailed_description": "Se desarrolló una solución multiplataforma (Android y Windows) diseñada para optimizar el ciclo de producción de una empresa de cartelería exterior. El sistema automatiza la creación de órdenes de trabajo mediante el procesamiento de archivos PDF, eliminando la carga administrativa manual.\n\nGracias a un sistema de estados dinámico, el equipo puede asignar, dividir y monitorizar tareas en tiempo real, garantizando el aprovechamiento máximo de materiales y evitando fugas de beneficio. Es un software robusto, escalable y diseñado para operar con un mantenimiento mínimo, permitiendo que el cliente se centre exclusivamente en su producción.",
+    "title": "Automatización de Flujos de Trabajo Industriales",
+    "description": "Suite de aplicaciones Android y Windows para optimizar la producción y logística de publicidad exterior.",
+    "detailed_description": "Un complejo sistema multiplataforma (Android/Windows) construido para automatizar flujos de trabajo industriales. El sistema extrae datos de PDFs de producción para generar órdenes de trabajo, asignar tareas a los equipos y supervisar el estado de la producción en tiempo real. La sincronización en tiempo real permite a los supervisores gestionar el equilibrio de carga y la reducción de residuos de material de forma eficaz.",
     "technologies": [
       "Flutter",
       "Supabase",
@@ -70,6 +73,7 @@
     "image": "/projects/Valencia Outdoor/logo-valencia-outdoor.png.webp",
     "images": [],
     "url": "",
-    "github": ""
+    "github": "",
+    "isFeatured": false
   }
 ]

@@ -1,14 +1,10 @@
 import { useEffect, useState } from "react";
-// import { FaBriefcase, FaUmbrellaBeach } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import Timeline from "./TimeLine";
-
 
 export default function About() {
   const [activeTab, setActiveTab] = useState("sobre mí");
   const tabs = ["sobre mí", "trayectoria", "descargar CV"];
-  // const [image, setImage] = useState("perfil_2.JPEG");
-
   const image = "perfil.jpeg";
 
   const aboutMeText = `Soy desarrollador Full Stack especializado en crear soluciones dinámicas, limpias y escalables. Adapto mi stack tecnológico a las necesidades de cada proyecto para garantizar la máxima calidad y robustez, manteniéndome siempre a la vanguardia de las tendencias del sector.
@@ -29,87 +25,106 @@ Sigo en constante crecimiento y evolución profesional. Si tienes una idea o un 
     }
   }, [activeTab]);
 
-  // function changeImage(img: string) {
-  //   setImage(img);
-  // }
-
   return (
     <section
       id="about"
-      className="md:w-screen md:h-full bg-neutral-900 text-neutral-100 flex flex-col py-20 px-6 text-center border-t border-neutral-800"
+      className="bg-neutral-900 text-neutral-100 flex flex-col py-24 px-6 text-center relative"
     >
-      <h2 className="text-3xl font-bold mb-4">Sobre mí</h2>
-      {/* Tabs */}
-      <div className="relative flex justify-center mb-8 gap-1.5 bg-gradient-to-r from-neutral-800 via-neutral-850 to-neutral-800 p-1 rounded-full w-full max-w-lg mx-auto shadow-lg border border-neutral-700/50">
-        {tabs.map((tab) => (
-          <button
-            key={tab}
-            className={`relative z-10 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 focus:outline-none cursor-pointer flex-1 ${activeTab === tab
-              ? "text-white"
-              : "text-neutral-400 hover:text-neutral-200"
-              }`}
-            onClick={() => setActiveTab(tab)}
-          >
-            <span className="relative z-10">
-              {tab.charAt(0).toUpperCase() + tab.slice(1)}
-            </span>
-            {activeTab === tab && (
-              <span className="absolute inset-0 bg-gradient-to-r from-sky-500 to-cyan-400 rounded-full shadow-lg shadow-sky-500/50 animate-pulse-subtle" />
-            )}
-          </button>
-        ))}
-      </div>
-      {/* Tab Content */}
-      {activeTab === "sobre mí" && (
-        <div className="flex flex-col md:flex-row items-center gap-20 md:gap-25 max-w-6xl mx-auto justify-between pb-4">
-          <p className="text-lg text-neutral-400 text-left md:w-1/2 whitespace-pre-line">
-            {aboutMeText}
-          </p>
-          <div>
-            <div className="relative w-80 h-80 md:w-100 md:h-100 overflow-hidden rounded-lg border-4 border-neutral-800">
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={image}
-                  src={`/${image}`}
-                  alt="Kevin García"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 1.05 }}
-                  transition={{ 
-                    duration: 0.4,
-                    ease: "easeInOut"
-                  }}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="max-w-7xl mx-auto w-full"
+      >
+        <h3 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
+          Creando soluciones <span className="text-neutral-500">digitales</span> con propósito.
+        </h3>
+
+        {/* Tabs - Monochromatic */}
+        <div className="relative flex justify-center mb-16 gap-2 bg-neutral-800/50 p-1.5 rounded-2xl w-full max-w-lg mx-auto shadow-xl border border-neutral-700/50 backdrop-blur-md">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              className={`relative z-10 px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 focus:outline-none cursor-pointer flex-1 ${activeTab === tab
+                ? "text-white"
+                : "text-neutral-400 hover:text-neutral-200"
+                }`}
+              onClick={() => setActiveTab(tab)}
+            >
+              <span className="relative z-20">
+                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              </span>
+              {activeTab === tab && (
+                <motion.span
+                  layoutId="activeTab"
+                  className="absolute inset-0 bg-sky-500 rounded-xl shadow-lg shadow-sky-500/20"
                 />
-              </AnimatePresence>
-            </div>
-
-            {/* <div className="bg-neutral-800 p-4 rounded-lg shadow-md mt-2 flex flex-col gap-2">
-              <button 
-                className={`text-sm font-semibold text-neutral-300 hover:text-neutral-100 bg-neutral-700 rounded-full px-4 py-2 flex items-center justify-center gap-2 transition cursor-pointer ${image === "perfil.jpeg" ? "ring-2 ring-sky-500" : ""}`} 
-                onClick={() => changeImage("perfil.jpeg")}
-              >
-                <FaBriefcase className="text-lg" />
-                <span>Lunes</span>
-              </button>
-              <button 
-                className={`text-sm font-semibold text-neutral-300 hover:text-neutral-100 bg-neutral-700 rounded-full px-4 py-2 flex items-center justify-center gap-2 transition cursor-pointer ${image === "perfil_2.JPEG" ? "ring-2 ring-sky-500" : ""}`} 
-                onClick={() => changeImage("perfil_2.JPEG")}
-              >
-                <FaUmbrellaBeach className="text-lg" />
-                <span>Viernes</span>
-              </button>
-            </div> */}
-            
-          </div>
-
+              )}
+            </button>
+          ))}
         </div>
-      )}
-      {activeTab === "trayectoria" && (
-        <Timeline />
-      )}
 
+        {/* Tab Content */}
+        <AnimatePresence mode="wait">
+          {activeTab === "sobre mí" ? (
+            <motion.div
+              key="about-me"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 20 }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-col md:flex-row items-center gap-12 lg:gap-24 max-w-6xl mx-auto justify-between"
+            >
+              <div className="text-lg text-neutral-400 text-left md:w-3/5 space-y-6 leading-relaxed">
+                <p className="text-neutral-400 text-lg leading-relaxed whitespace-pre-line text-left">
+                  {aboutMeText}
+                </p>
+                <div className="space-y-6 text-left">
+                  <div className="flex gap-4 items-start">
+                    <div className="w-1 h-12 bg-sky-500/20 rounded-full mt-2" />
+                    <div>
+                      <h4 className="text-white font-bold text-xl">+3 años</h4>
+                      <p className="text-neutral-500">Desarrollando productos digitales de alto impacto.</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4 items-start">
+                    <div className="w-1 h-12 bg-sky-500/20 rounded-full mt-2" />
+                    <div>
+                      <h4 className="text-white font-bold text-xl">Enfoque Full Stack</h4>
+                      <p className="text-neutral-500">Especializado en backends robustos e interfaces fluidas.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="md:w-2/5 flex justify-center">
+                <div className="relative group">
+                  <div className="absolute -inset-1 bg-sky-500 rounded-2xl blur opacity-10 group-hover:opacity-30 transition duration-1000 group-hover:duration-200"></div>
+                  <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden rounded-2xl border border-neutral-700 bg-neutral-800 shadow-2xl">
+                    <img
+                      src={`/${image}`}
+                      alt="Kevin García"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ) : activeTab === "trayectoria" ? (
+            <motion.div
+              key="timeline"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Timeline />
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
+      </motion.div>
     </section>
   );
 }

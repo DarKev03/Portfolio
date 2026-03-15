@@ -1,15 +1,13 @@
 import { useEffect, useState, useRef } from "react";
-import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaGithub, FaLinkedin, FaInstagram, FaChevronDown } from "react-icons/fa";
 
 function changeName(names: string[]) {
     const randomIndex = Math.floor(Math.random() * names.length);
     return names[randomIndex];
 }
 
-
-
-var names = ["Developer", "Creative", "Focused", "Problem Solver", "Innovative", "Passionate", "Coder"];
+const names = ["Innovador", "Solucionador", "Desarrollador", "Programador"];
 
 export default function Hero() {
     const [showName, setShowName] = useState(false);
@@ -20,7 +18,7 @@ export default function Hero() {
     useEffect(() => {
         if (!showName) {
             intervalRef.current = setInterval(() => {
-                setRandomName(changeName(names));                
+                setRandomName(changeName(names));
                 setContador((prev) => prev + 1);
             }, 1500);
         }
@@ -46,75 +44,114 @@ export default function Hero() {
     return (
         <section
             id="hero"
-            className="w-full h-screen min-h-[60vh] flex flex-col justify-center items-center text-center bg-neutral-900 text-neutral-100"
+            className="w-full h-screen min-h-[60vh] flex flex-col justify-center items-center text-center bg-neutral-900 text-neutral-100 relative overflow-hidden"
         >
-            <motion.h1
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 2.5 }}
-                className="text-4xl md:text-6xl font-bold mb-4"
-            >
-                Hi, I'm{" "}
-                <span className="text-sky-400 cursor-pointer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    {!showName ? (
-                        <motion.span
-                            key={randomName}
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.5 }}
+            {/* Background decorative elements - Simplified */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 2, ease: "easeOut" }}
+                    className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-sky-500/10 rounded-full blur-[150px]"
+                />
+            </div>
+
+            <div className="relative z-10 space-y-8 flex flex-col items-center">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+                    <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
+                        Hola, soy{" "}
+                        <span
+                            className="text-sky-400 cursor-pointer inline-block"
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
                         >
-                            {randomName}
-                        </motion.span>
-                    ) : (
-                        <motion.span
-                            key="Kevin García"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 0.5 }}
-                        >
-                            Kevin García
-                        </motion.span>
-                    )}
-                </span>
-            </motion.h1>
-            <motion.p
+                            <AnimatePresence mode="wait">
+                                {!showName ? (
+                                    <motion.span
+                                        key={randomName}
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -10 }}
+                                        transition={{ duration: 0.3 }}
+                                    >
+                                        {randomName}
+                                    </motion.span>
+                                ) : (
+                                    <motion.span
+                                        key="Kevin García"
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -10 }}
+                                        transition={{ duration: 0.3 }}
+                                    >
+                                        Kevin García
+                                    </motion.span>
+                                )}
+                            </AnimatePresence>
+                        </span>
+                    </h1>
+                </motion.div>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                    className="text-xl md:text-2xl max-w-2xl text-neutral-400 px-6 leading-relaxed"
+                >
+                    Desarrollador Full Stack apasionado por crear experiencias digitales innovadoras, escalables y visualmente impactantes.
+                </motion.p>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                    className="flex flex-row text-neutral-400 gap-8 pt-8"
+                >
+                    <a
+                        href="https://www.linkedin.com/in/kevin-r-garc%C3%ADa-hern%C3%A1ndez-5859b6173/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-4 bg-neutral-800/50 rounded-2xl border border-neutral-700 hover:border-sky-400 hover:text-sky-400 transition-all hover:-translate-y-1 shadow-lg"
+                    >
+                        <FaLinkedin size={24} />
+                    </a>
+                    <a
+                        href="https://github.com/DarKev03"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-4 bg-neutral-800/50 rounded-2xl border border-neutral-700 hover:border-white hover:text-white transition-all hover:-translate-y-1 shadow-lg"
+                    >
+                        <FaGithub size={24} />
+                    </a>
+                    <a
+                        href="https://www.instagram.com/_kev.0_/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-4 bg-neutral-800/50 rounded-2xl border border-neutral-700 hover:border-sky-500 hover:text-sky-500 transition-all hover:-translate-y-1 shadow-lg"
+                    >
+                        <FaInstagram size={24} />
+                    </a>
+                </motion.div>
+            </div>
+
+            <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 2.5, delay: 0.2 }}
-                className="text-xl md:text-2xl max-w-xl text-neutral-400"
+                transition={{ delay: 1, duration: 1 }}
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-neutral-500"
             >
-                Desarrollador Full Stack, me divierto creando soluciones limpias y eficientes.
-            </motion.p>
-            <div className="flex flex-row text-neutral-400 gap-12 text-2xl max-w-6xl pt-12 w-full justify-center">
-                <a
-                    href="https://www.linkedin.com/in/kevin-r-garc%C3%ADa-hern%C3%A1ndez-5859b6173/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                    className="hover:text-sky-400 transition hover:scale-110"
+                <span className="text-xs uppercase tracking-[0.2em]">Desliza</span>
+                <motion.div
+                    animate={{ y: [0, 8, 0] }}
+                    transition={{ repeat: Infinity, duration: 2 }}
                 >
-                    <FaLinkedin />
-                </a>
-                <a
-                    href="https://github.com/DarKev03"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub"
-                    className="hover:text-sky-400 transition hover:scale-110"
-                >
-                    <FaGithub />
-                </a>
-                <a
-                    href="https://www.instagram.com/_kev.0_/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    className="hover:text-sky-400 transition hover:scale-110"
-                >
-                    <FaInstagram />
-                </a>
-            </div>
+                    <FaChevronDown />
+                </motion.div>
+            </motion.div>
         </section>
     );
 }
