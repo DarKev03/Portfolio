@@ -10,9 +10,6 @@ function changeName(names: string[]) {
 const names = [
     "Fullstack Developer",
     "Problem Solver",
-    "Bug Hunter",
-    "Late Night Debugger",
-    "Builder of Things",
     "Innovator",
     "Programmer",
     "Designer"
