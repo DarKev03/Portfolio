@@ -7,7 +7,16 @@ function changeName(names: string[]) {
     return names[randomIndex];
 }
 
-const names = ["Innovador", "Solucionador", "Desarrollador", "Programador"];
+const names = [
+    "Fullstack Developer",
+    "Problem Solver",
+    "Bug Hunter",
+    "Late Night Debugger",
+    "Builder of Things",
+    "Innovator",
+    "Programmer",
+    "Designer"
+];
 
 export default function Hero() {
     const [showName, setShowName] = useState(false);
@@ -22,10 +31,10 @@ export default function Hero() {
                 setContador((prev) => prev + 1);
             }, 1500);
         }
-        if (contador >= 8) {
-            setShowName(true);
-            if (intervalRef.current) clearInterval(intervalRef.current);
-        }
+        // if (contador >= 8) {
+        //     setShowName(true);
+        //     if (intervalRef.current) clearInterval(intervalRef.current);
+        // }
         return () => {
             if (intervalRef.current) clearInterval(intervalRef.current);
         };

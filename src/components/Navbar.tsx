@@ -9,8 +9,8 @@ export default function Navbar() {
     { id: "hero", label: "Inicio" },
     { id: "skills", label: "Habilidades" },
     { id: "about", label: "Sobre mí" },
-    { id: "clients", label: "Clientes" },
     { id: "projects", label: "Proyectos" },
+    { id: "clients", label: "Clientes" },
     { id: "contact", label: "Contacto" },
   ];
 
@@ -23,18 +23,16 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "py-4" : "py-6"
-      }`}
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "py-4" : "py-6"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6">
-        <div 
-          className={`flex items-center justify-between md:justify-center px-6 py-3 rounded-2xl border transition-all duration-300 ${
-            scrolled 
-            ? "bg-neutral-900/80 backdrop-blur-xl border-neutral-700/50 shadow-2xl" 
-            : "bg-transparent border-transparent"
-          }`}
+        <div
+          className={`flex items-center justify-between md:justify-center px-6 py-3 rounded-2xl border transition-all duration-300 ${scrolled
+              ? "bg-neutral-900/80 backdrop-blur-xl border-neutral-700/50 shadow-2xl"
+              : "bg-transparent border-transparent"
+            }`}
         >
           {/* Logo/Brand - Monochromatic */}
           <div className="md:hidden">
@@ -49,15 +47,15 @@ export default function Navbar() {
             aria-label="Toggle menu"
             onClick={() => setOpen((o) => !o)}
           >
-            <motion.span 
+            <motion.span
               animate={open ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
               className="block h-0.5 w-6 bg-neutral-200"
             />
-            <motion.span 
+            <motion.span
               animate={open ? { opacity: 0 } : { opacity: 1 }}
               className="block h-0.5 w-6 bg-neutral-200"
             />
-            <motion.span 
+            <motion.span
               animate={open ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
               className="block h-0.5 w-6 bg-neutral-200"
             />
@@ -91,7 +89,7 @@ export default function Navbar() {
           >
             <ul className="flex flex-col px-8 py-10 gap-6">
               {sections.map((s, idx) => (
-                <motion.li 
+                <motion.li
                   key={s.id}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}

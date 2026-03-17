@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Centro Inteligente de Recetas y Nutrición",
+    "title": "MyRecipes",
     "description": "Aplicación móvil multiplataforma para la gestión personalizada de recetas, planificación de comidas y seguimiento automatizado de ingredientes.",
     "detailed_description": "Una solución móvil completa desarrollada con Flutter y Spring Boot, con una base de datos en tiempo real con Supabase. La aplicación ofrece una sólida autenticación de usuarios, creación intuitiva de recetas con parámetros personalizables, planificación de comidas semanal/mensual y generación automática de listas de la compra basada en las recetas elegidas. Optimizada para un alto rendimiento y accesibilidad.",
     "technologies": [
@@ -43,10 +43,10 @@
     ],
     "url": "https://jp-multitarea.vercel.app/",
     "github": "",
-    "isFeatured": true
+    "isFeatured": false
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Gestión Empresarial de Personal",
     "description": "Una solución de RR.HH. robusta para el seguimiento del tiempo de los empleados, la gestión de turnos y el manejo de documentos digitales.",
     "detailed_description": "Aplicación móvil empresarial interna diseñada para agilizar los procesos de RR.HH. El personal puede registrar la asistencia mediante geofencing o códigos QR, solicitar vacaciones y subir documentación directamente desde sus dispositivos. El backend utiliza Supabase para actualizaciones en tiempo real y almacenamiento seguro. Redujo significativamente la carga administrativa para el cliente.",
@@ -75,5 +75,22 @@
     "url": "",
     "github": "",
     "isFeatured": false
+  },
+  {
+    "id": 5,
+    "title": "Chaptr - Beta",
+    "description": "Marcador automático de capítulos para audiolibros utilizando IA local.",
+    "detailed_description": "Una herramienta de escritorio que detecta y genera automáticamente marcadores de capítulos para archivos de audiolibros, exportándolos en formato M4B listos para cualquier reproductor.\n\nDesarrollado con Python, Whisper (reconocimiento de voz), Ollama + Qwen 2.5 (IA local) y FFmpeg. Todo el proceso se ejecuta localmente: sin nube, sin claves de API y sin envío de datos externos.",
+    "technologies": [
+      "Python",
+      "Whisper"
+    ],
+    "image": "/projects/Chaptr/icon_chaptr.png",
+    "images": [
+      "/projects/Chaptr/foto_chaptr.png"
+    ],
+    "url": "",
+    "github": "",
+    "isFeatured": true
   }
 ]

@@ -4,15 +4,6 @@ import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
 const experiences = [
     {
         title: "Desarrollador FullStack",
-        company: "Métrica S.L – Fundador y Desarrollador",
-        date: "Abr 2025 – Actualidad",
-        description:
-            "Empresa de desarrollo de software en la que soy co-fundador, entregando soluciones completas para móvil, web y escritorio. Entre los clientes se incluyen nombres como Valencia Outdoor, Gangazon y JibilHedi. Me enfoco en crear aplicaciones escalables con React, Flutter e infraestructuras cloud modernas.",
-        side: "left",
-        type: "work"
-    },
-    {
-        title: "Desarrollador FullStack",
         company: "Idrica",
         date: "Sep 2024 – Actualidad",
         description:
@@ -28,7 +19,7 @@ const experiences = [
             "Desarrollé cuadros de mando interactivos y automatizaciones de informes utilizando Power BI y Python. Estas herramientas optimizaron la toma de decisiones al proporcionar análisis de datos claros y procesables para clientes clave.",
         side: "left",
         type: "work"
-    },    
+    },
     {
         title: "Analista de Sistemas",
         company: "Universidad de Valencia - Pulsia",
@@ -64,7 +55,7 @@ export default function Timeline() {
                             >
                                 <span className="text-sky-400 font-bold text-sm mb-2 block tracking-widest uppercase">{exp.date}</span>
                                 <h3 className="text-2xl font-bold text-white mb-1">{exp.title}</h3>
-                                <p className="text-neutral-300 font-semibold mb-4 flex items-center gap-2 justify-start md:justify-end">
+                                <p className={`text-neutral-300 font-semibold mb-4 flex items-center gap-2 justify-start ${exp.side === "left" ? "md:justify-end" : "md:justify-start"}`}>
                                     {exp.side === "left" ? <>{exp.company} <FaBriefcase className="text-sky-500 opacity-40" /></> : <><FaBriefcase className="text-sky-500 opacity-40" /> {exp.company}</>}
                                 </p>
                                 <p className="text-neutral-400 leading-relaxed text-sm md:text-base">{exp.description}</p>

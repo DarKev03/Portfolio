@@ -1,6 +1,6 @@
 import projectsData from "../assets/projects.json";
 import { FaGithub, FaGlobe, FaReact } from "react-icons/fa";
-import { SiFlutter, SiSpringboot, SiSupabase, SiTailwindcss, SiVite, SiTypescript } from "react-icons/si";
+import { SiFlutter, SiSpringboot, SiSupabase, SiTailwindcss, SiVite, SiTypescript, SiPython, SiOpenai } from "react-icons/si";
 import { useState } from "react";
 import type { ReactElement } from "react";
 import { motion } from "framer-motion";
@@ -17,6 +17,8 @@ const techIcons: { [key: string]: ReactElement } = {
     "Tailwind CSS": <SiTailwindcss className="inline mr-1" />,
     "Vite": <SiVite className="inline mr-1" />,
     "TypeScript": <SiTypescript className="inline mr-1" />,
+    "Python": <SiPython className="inline mr-1" />,
+    "Whisper": <SiOpenai className="inline mr-1" />,
 };
 
 const containerVariants = {
@@ -84,7 +86,7 @@ export default function Projects() {
                             className="group cursor-pointer bg-neutral-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-neutral-700/50 hover:border-sky-500/50 shadow-xl transition-all flex flex-col h-full"
                             onClick={() => setSelectedProject(project)}
                         >
-                            <div className="relative h-56 overflow-hidden bg-neutral-800">
+                            <div className="relative h-56 overflow-hidden bg-white">
                                 {project.image ? (
                                     <img
                                         src={project.image}
@@ -152,9 +154,9 @@ export default function Projects() {
             </div>
 
             {selectedProject && (
-                <ProjectModal 
-                    project={selectedProject} 
-                    onClose={() => setSelectedProject(null)} 
+                <ProjectModal
+                    project={selectedProject}
+                    onClose={() => setSelectedProject(null)}
                 />
             )}
         </section>

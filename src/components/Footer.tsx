@@ -5,7 +5,7 @@ export default function Footer() {
 
             <div className="max-w-7xl mx-auto flex flex-col items-center gap-4">
                 <p className="text-neutral-500 text-sm">
-                    © {new Date().getFullYear()} <span className="text-neutral-300 font-bold">Kevin García</span>. Todos los derechos reservados.
+                    © {new Date().getFullYear()} <span className="text-neutral-300 font-bold">Kevin García</span>. Ningún derecho reservado.
                 </p>
                 <p className="text-neutral-600 text-xs">
                     Construido con <span className="text-sky-400">React</span> + <span className="text-sky-400">Framer Motion</span> + <span className="text-sky-400">Tailwind</span>
