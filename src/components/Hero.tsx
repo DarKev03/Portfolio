@@ -8,11 +8,13 @@ function changeName(names: string[]) {
 }
 
 const names = [
-    "Fullstack Developer",
-    "Problem Solver",
-    "Innovator",
-    "Programmer",
-    "Designer"
+    "Desarrollador Fullstack",
+    "Desarrollador Backend",
+    "Desarrollador móvil",
+    "Innovador",
+    "Programador",
+    "Ingeniero de Software",
+    "Arquitecto de Software",
 ];
 
 export default function Hero() {
