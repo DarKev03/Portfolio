@@ -1,35 +1,9 @@
 import { motion } from "framer-motion";
 import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
+import experiences from "../assets/experiences.json";
+import type { Experience } from "../types/Experience";
 
-const experiences = [
-    {
-        title: "Desarrollador FullStack",
-        company: "Idrica",
-        date: "Sep 2024 – Actualidad",
-        description:
-            "Desarrollo frontend y backend de una aplicación móvil encargada de la gestión inteligente de ordenes de trabajo para operarios en campo. Se implementan funciones claves como la gestión de ordenes en tiempo real, telelecturas y multitenant.",
-        side: "right",
-        type: "work"
-    },
-    {
-        title: "Analista de Datos - Prácticas",
-        company: "ViewNext",
-        date: "Marz 2024 – Jun 2024",
-        description:
-            "Desarrollé cuadros de mando interactivos y automatizaciones de informes utilizando Power BI y Python. Estas herramientas optimizaron la toma de decisiones al proporcionar análisis de datos claros y procesables para clientes clave.",
-        side: "left",
-        type: "work"
-    },
-    {
-        title: "Analista de Sistemas",
-        company: "Universidad de Valencia - Pulsia",
-        date: "Feb 2023 – Marz 2024",
-        description:
-            "Gestioné y optimicé sistemas informáticos para la Universidad de Valencia, mejorando la fiabilidad y rendimiento de las plataformas académicas.",
-        side: "right",
-        type: "work"
-    },
-];
+const experiencesData = experiences as Experience[];
 
 export default function Timeline() {
     return (
@@ -38,7 +12,7 @@ export default function Timeline() {
             <div className="absolute left-1/2 top-0 transform -translate-x-1/2 h-full w-px bg-sky-500/20 hidden md:block" />
 
             <div className="flex flex-col gap-12 relative z-10">
-                {experiences.map((exp, idx) => (
+                {experiencesData.map((exp, idx) => (
                     <motion.div
                         key={idx}
                         initial={{ opacity: 0, x: exp.side === "left" ? -50 : 50 }}

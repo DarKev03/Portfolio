@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Backend Developer",
+    "company": "Grupo Aitana",
+    "date": "May 2026 – Actualidad",
+    "description": "Desarrollo de connectores, integraciones de azure y servicios backend en .Net. Implementación de microservicios y APIs RESTful para mejorar la eficiencia y escalabilidad de múltiples aplicaciones.",
+    "side": "left",
+    "type": "work"
+  },
+  {
+    "title": "Desarrollador FullStack",
+    "company": "Idrica",
+    "date": "Sep 2024 – Actualidad",
+    "description": "Desarrollo frontend y backend de una aplicación móvil encargada de la gestión inteligente de ordenes de trabajo para operarios en campo. Se implementan funciones claves como la gestión de ordenes en tiempo real, telelecturas y multitenant.",
+    "side": "right",
+    "type": "work"
+  },
+  {
+    "title": "Analista de Datos - Prácticas",
+    "company": "ViewNext",
+    "date": "Marz 2024 – Jun 2024",
+    "description": "Desarrollo de cuadros de mando interactivos y automatizaciones de informes utilizando Power BI y Python. Herramientas encargadas de la optimización de la toma de decisiones al proporcionar análisis de datos claros y procesables para clientes clave.",
+    "side": "left",
+    "type": "work"
+  },
+  {
+    "title": "Analista de Sistemas",
+    "company": "Universidad de Valencia - Pulsia",
+    "date": "Feb 2023 – Marz 2024",
+    "description": "Gestión y optimización de sistemas informáticos para la Universidad de Valencia, mejorando la fiabilidad y rendimiento de las plataformas académicas.",
+    "side": "right",
+    "type": "work"
+  }
+]
